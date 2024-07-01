@@ -80,8 +80,6 @@ $datestartvalidity = dol_mktime(0, 0, 0, GETPOST('datestartvaliditymonth', 'int'
 $dateendvalidity = dol_mktime(0, 0, 0, GETPOST('dateendvaliditymonth', 'int'), GETPOST('dateendvalidityday', 'int'), GETPOST('dateendvalidityyear', 'int'));
 $dateofbirth = dol_mktime(0, 0, 0, GETPOST('dateofbirthmonth', 'int'), GETPOST('dateofbirthday', 'int'), GETPOST('dateofbirthyear', 'int'));
 
-
-
 $childids = $user->getAllChildIds(1);	// For later, test on salary visibility
 
 $object = new User($db);
@@ -265,7 +263,6 @@ if (empty($reshook)) {
 			$object->gender = GETPOST("gender", 'aZ09');
 			$object->admin = GETPOST("admin", 'int');
 			$object->address = GETPOST('address', 'alphanohtml');
-			$object->card_uid = GETPOST('card_uid', 'alphanohtml');
 			$object->zip = GETPOST('zipcode', 'alphanohtml');
 			$object->town = GETPOST('town', 'alphanohtml');
 			$object->country_id = GETPOST('country_id', 'int');
@@ -450,7 +447,6 @@ if (empty($reshook)) {
 					$object->login = GETPOST("login", 'alphanohtml');
 				}
 				$object->address = GETPOST('address', 'alphanohtml');
-				$object->card_uid = GETPOST('card_uid', 'alphanohtml');
 				$object->zip = GETPOST('zipcode', 'alphanohtml');
 				$object->town = GETPOST('town', 'alphanohtml');
 				$object->country_id = GETPOST('country_id', 'int');
@@ -750,6 +746,7 @@ if (empty($reshook)) {
 /*
  * View
  */
+
 $form = new Form($db);
 $formother = new FormOther($db);
 $formcompany = new FormCompany($db);
@@ -1010,13 +1007,6 @@ if ($action == 'create' || $action == 'adduserldap') {
 
 
 	print '</table><hr><table class="border centpercent">';
-
-	//card uid
-	print '<tr><td class="tdtop titlefieldcreate">'.$form->editfieldkey('Uid carte', 'card_uid', '', $object, 0).'</td>';
-	print '<td><textarea name="address" id="address" class="quatrevingtpercent" rows="3" wrap="soft">';
-	print $object->card_uid;
-	print '</textarea></td></tr>';
-	
 
 
 	// Date validity
@@ -1520,6 +1510,7 @@ if ($action == 'create' || $action == 'adduserldap') {
 				print $langs->trans("DomainUser", $ldap->domainFQDN);
 				print '</td></tr>'."\n";
 			}
+
 			// Employee
 			print '<tr><td>'.$langs->trans("Employee").'</td><td>';
 			print '<input type="checkbox" disabled name="employee" value="1"'.($object->employee ? ' checked="checked"' : '').'>';
@@ -1888,8 +1879,6 @@ if ($action == 'create' || $action == 'adduserldap') {
 
 			print '</div>';
 			print '<div style="clear:both"></div>';
-
-
 
 			include 'UIDcard.php';
 			print dol_get_fiche_end();
@@ -2382,13 +2371,6 @@ if ($action == 'create' || $action == 'adduserldap') {
 			print '<hr>';
 
 			print '<table class="border centpercent">';
-
-			//card uid
-			print '<tr><td class="tdtop titlefieldcreate">'.$form->editfieldkey('card_uid', 'card_uid', '', $object, 0).'</td>';
-			print '<td><textarea name="card_uid" id="card_uid" class="quatrevingtpercent" rows="3" wrap="soft">';
-			print "$object->card_uid";
-			print $object->card_uid;
-			print '</textarea></td></tr>';
 
 			// Date access validity
 			print '<tr><td>'.$langs->trans("RangeOfLoginValidity").'</td>';

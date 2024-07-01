@@ -151,7 +151,7 @@ class pdf_crabe extends ModelePDFFactures
 		$langs->loadLangs(array("main", "bills"));
 
 		$this->db = $db;
-		$this->name = "Facture base";
+		$this->name = "crabe";
 		$this->description = $langs->trans('PDFCrabeDescription');
 		$this->update_main_doc_field = 1; // Save the name of generated file as the main doc when generating a doc with this template
 
@@ -2167,7 +2167,7 @@ class pdf_crabe extends ModelePDFFactures
 				}
 			}
 		}
-		
+
 		$pdf->SetTextColor(0, 0, 0);
 		return $top_shift;
 	}
@@ -2177,18 +2177,14 @@ class pdf_crabe extends ModelePDFFactures
 	 *   	Show footer of page. Need this->emetteur object
 	 *
 	 *   	@param	TCPDF		$pdf     			PDF
-	 * 	@param	Facture		$object				Object to show
+	 * 		@param	Facture		$object				Object to show
 	 *      @param	Translate	$outputlangs		Object lang for output
 	 *      @param	int			$hidefreetext		1=Hide free text
 	 *      @return	int								Return height of bottom margin including footer text
 	 */
-	protected function _pagefoot($pdf, $object, $outputlangs, $hidefreetext = 0)
+	protected function _pagefoot(&$pdf, $object, $outputlangs, $hidefreetext = 0)
 	{
-		
-		$pdf->writeHTML('<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><p style="text-align:center; font-size: 7px;top:5px;">RNA : W263012815</p>', true, false, false, false, '');
 		$showdetails = getDolGlobalInt('MAIN_GENERATE_DOCUMENTS_SHOW_FOOT_DETAILS', 0);
 		return pdf_pagefoot($pdf, $outputlangs, 'INVOICE_FREE_TEXT', $this->emetteur, $this->marge_basse, $this->marge_gauche, $this->page_hauteur, $object, $showdetails, $hidefreetext, $this->page_largeur, $this->watermark);
-		
 	}
-
 }
