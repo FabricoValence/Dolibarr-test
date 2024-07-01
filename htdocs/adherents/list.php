@@ -58,6 +58,7 @@ $search_gender = GETPOST("search_gender", 'alpha');
 $search_civility = GETPOST("search_civility", 'alpha');
 $search_company = GETPOST('search_company', 'alphanohtml');
 $search_login = GETPOST("search_login", 'alpha');
+$search_card_uid = GETPOST("search_card_uid", 'alpha');///////////////////////////
 $search_address = GETPOST("search_address", 'alpha');
 $search_zip = GETPOST("search_zip", 'alpha');
 $search_town = GETPOST("search_town", 'alpha');
@@ -127,6 +128,7 @@ $fieldstosearchall = array(
 	'd.lastname'=>'Lastname',
 	'd.firstname'=>'Firstname',
 	'd.login'=>'Login',
+	'd.card_uid'=>'Card_uid',
 	'd.societe'=>"Company",
 	'd.email'=>'EMail',
 	'd.address'=>'Address',
@@ -148,9 +150,9 @@ $arrayfields = array(
 	'd.firstname'=>array('label'=>"Firstname", 'checked'=>1),
 	'd.gender'=>array('label'=>"Gender", 'checked'=>0),
 	'd.company'=>array('label'=>"Company", 'checked'=>1),
-	'd.login'=>array('label'=>"Login", 'checked'=>1),
+	/////////////////'d.login'=>array('label'=>"Login", 'checked'=>1),
 	'd.morphy'=>array('label'=>"MemberNature", 'checked'=>1),
-	't.libelle'=>array('label'=>"Type", 'checked'=>1),
+	'd.libelle'=>array('label'=>"Type", 'checked'=>1),
 	'd.email'=>array('label'=>"Email", 'checked'=>1),
 	'd.address'=>array('label'=>"Address", 'checked'=>0),
 	'd.zip'=>array('label'=>"Zip", 'checked'=>0),
@@ -168,6 +170,7 @@ $arrayfields = array(
 	'd.tms'=>array('label'=>"DateModificationShort", 'checked'=>0, 'position'=>500),
 	'd.statut'=>array('label'=>"Status", 'checked'=>1, 'position'=>1000),
 	'd.import_key'=>array('label'=>"ImportId", 'checked'=>0, 'position'=>1100),
+	'd.card_uid'=>array('label'=>"Card_uid", 'checked'=>1, 'position'=>1200)
 );
 // Extra fields
 include DOL_DOCUMENT_ROOT.'/core/tpl/extrafields_list_array_fields.tpl.php';
@@ -197,7 +200,7 @@ if ($reshook < 0) {
 if (empty($reshook)) {
 	// Selection of new fields
 	include DOL_DOCUMENT_ROOT.'/core/actions_changeselectedfields.inc.php';
-
+	$search_card_uid = GETPOST("search_card_uid", 'alpha');
 	// Purge search criteria
 	if (GETPOST('button_removefilter_x', 'alpha') || GETPOST('button_removefilter.x', 'alpha') || GETPOST('button_removefilter', 'alpha')) { // All tests are required to be compatible with all browsers
 		$statut = '';
@@ -210,6 +213,7 @@ if (empty($reshook)) {
 		$search_gender = "";
 		$search_civility = "";
 		$search_login = "";
+		$search_card_uid = "";
 		$search_company = "";
 		$search_type = "";
 		$search_email = "";
@@ -334,11 +338,11 @@ if ((!empty($search_categ) && $search_categ > 0) || !empty($catid)) {
 } else {
 	$sql = "SELECT";
 }
-$sql .= " d.rowid, d.ref, d.login, d.lastname, d.firstname, d.gender, d.societe as company, d.fk_soc,";
+$sql .= " d.rowid, d.ref, d.lastname, d.firstname, d.gender, d.societe as company, d.fk_soc,";
 $sql .= " d.civility, d.datefin, d.address, d.zip, d.town, d.state_id, d.country,";
 $sql .= " d.email, d.phone, d.phone_perso, d.phone_mobile, d.birth, d.public, d.photo,";
 $sql .= " d.fk_adherent_type as type_id, d.morphy, d.statut, d.datec as date_creation, d.tms as date_update,";
-$sql .= " d.note_private, d.note_public, d.import_key,";
+$sql .= " d.note_private, d.note_public, d.import_key, d.card_uid,";
 $sql .= " s.nom,";
 $sql .= " ".$db->ifsql("d.societe IS NULL", "s.nom", "d.societe")." as companyname,";
 $sql .= " t.libelle as type, t.subscription,";
@@ -446,6 +450,11 @@ if ($search_gender != '' && $search_gender != '-1') {
 if ($search_login) {
 	$sql .= natural_search("d.login", $search_login);
 }
+if ($search_card_uid != '') {
+    $sql .= natural_search("d.card_uid", $search_card_uid);
+}
+
+///////////////////////////////////////////////////////////////////////////////////
 if ($search_company) {
 	$sql .= natural_search("s.nom", $search_company);
 }
@@ -572,6 +581,11 @@ if ($search_gender) {
 if ($search_login) {
 	$param .= "&search_login=".urlencode($search_login);
 }
+if ($search_card_uid) {
+    $param .= "&search_card_uid=".urlencode($search_card_uid);
+}
+
+///////////////////////////////////////////////////////////////////
 if ($search_email) {
 	$param .= "&search_email=".urlencode($search_email);
 }
@@ -752,6 +766,12 @@ if (!empty($arrayfields['d.login']['checked'])) {
 	print '<td class="liste_titre left">';
 	print '<input class="flat maxwidth75imp" type="text" name="search_login" value="'.dol_escape_htmltag($search_login).'"></td>';
 }
+if (!empty($arrayfields['d.card_uid']['checked'])) {
+	print '<td class="liste_titre left">';
+	print '<input class="flat maxwidth75imp" type="text" name="search_card_uid" value="'.dol_escape_htmltag($search_card_uid).'"></td>';
+}
+
+////////////////////////////////////////////////////////////////////////:
 // Nature
 if (!empty($arrayfields['d.morphy']['checked'])) {
 	print '<td class="liste_titre center">';
@@ -895,9 +915,15 @@ if (!empty($arrayfields['d.gender']['checked'])) {
 if (!empty($arrayfields['d.company']['checked'])) {
 	print_liste_field_titre($arrayfields['d.company']['label'], $_SERVER["PHP_SELF"], 'companyname', '', $param, '', $sortfield, $sortorder);
 }
+
 if (!empty($arrayfields['d.login']['checked'])) {
 	print_liste_field_titre($arrayfields['d.login']['label'], $_SERVER["PHP_SELF"], 'd.login', '', $param, '', $sortfield, $sortorder);
 }
+if (!empty($arrayfields['d.card_uid']['checked'])) {
+	print_liste_field_titre($arrayfields['d.card_uid']['label'], $_SERVER["PHP_SELF"], 'd.card_uid', '', $param, '', $sortfield, $sortorder);
+}
+
+///////////////////////////////////////////
 if (!empty($arrayfields['d.morphy']['checked'])) {
 	print_liste_field_titre($arrayfields['d.morphy']['label'], $_SERVER["PHP_SELF"], 'd.morphy', '', $param, '', $sortfield, $sortorder);
 }
@@ -973,6 +999,8 @@ while ($i < min($num, $limit)) {
 	$memberstatic->ref = $obj->ref;
 	$memberstatic->civility_id = $obj->civility;
 	$memberstatic->login = $obj->login;
+	$memberstatic->card_uid = $obj->card_uid;//////////////////////////////////
+	////////////////////////////////////////////////
 	$memberstatic->lastname = $obj->lastname;
 	$memberstatic->firstname = $obj->firstname;
 	$memberstatic->gender = $obj->gender;
@@ -1082,6 +1110,14 @@ while ($i < min($num, $limit)) {
 			$totalarray['nbfield']++;
 		}
 	}
+
+	if (!empty($arrayfields['d.card_uid']['checked'])) {
+		print '<td class="tdoverflowmax150" title="'.dol_escape_htmltag($obj->card_uid).'">'.$obj->card_uid."</td>\n";
+		if (!$i) {
+			$totalarray['nbfield']++;
+		}
+	}
+	///////////////////////////////////////////////////////////////////
 	// Nature (Moral/Physical)
 	if (!empty($arrayfields['d.morphy']['checked'])) {
 		print '<td class="center">';

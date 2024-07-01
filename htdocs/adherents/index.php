@@ -83,7 +83,17 @@ $staticmember = new Adherent($db);
 $statictype = new AdherentType($db);
 $subscriptionstatic = new Subscription($db);
 
+$head = array(); 
+$head[0][0] = DOL_URL_ROOT.'/adherents/index.php'; 
+$head[0][1] = $langs->trans("Members"); 
+$head[0][2] = 'members'; 
+$head[1][0] = DOL_URL_ROOT.'/adherents/log_card.php'; 
+$head[1][1] = $langs->trans("Adhérents liste de passage"); 
+$head[1][2] = 'intrylist'; dol_fiche_head($head, 'members', $langs->trans("MembersArea"), -1, 'user');
+
+
 print load_fiche_titre($langs->trans("MembersArea"), $resultboxes['selectboxlist'], 'members');
+
 
 $MembersValidated = array();
 $MembersToValidate = array();
@@ -274,7 +284,6 @@ if ($conf->use_javascript_ajax) {
 	$boxgraph .= '</div>';
 	$boxgraph .= '<br>';
 }
-
 // boxes
 print '<div class="clearboth"></div>';
 print '<div class="fichecenter fichecenterbis">';
