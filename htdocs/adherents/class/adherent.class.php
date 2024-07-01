@@ -75,6 +75,27 @@ class Adherent extends CommonObject
 	public $login;
 
 	/**
+	 * @var string card_uid of member
+	 */
+	public $card_uid;
+
+	/**
+	 * @var string jours_entry of member
+	 */
+	public $jours_entry;
+
+	/**
+	 * @var string heure_entry_start of member
+	 */
+	public $heure_entry_start;
+
+	/**
+	 * @var string heure_entry_end of member
+	 */
+	public $heure_entry_end;
+	
+
+	/**
 	 * @var string Clear password in memory
 	 */
 	public $pass;
@@ -312,6 +333,10 @@ class Adherent extends CommonObject
 		'lastname' => array('type' => 'varchar(50)', 'label' => 'Lastname', 'enabled' => 1, 'visible' => -1, 'position' => 30, 'showoncombobox'=>1),
 		'firstname' => array('type' => 'varchar(50)', 'label' => 'Firstname', 'enabled' => 1, 'visible' => -1, 'position' => 35, 'showoncombobox'=>1),
 		'login' => array('type' => 'varchar(50)', 'label' => 'Login', 'enabled' => 1, 'visible' => -1, 'position' => 40),
+		'card_uid' => array('type' => 'varchar(255)', 'label' => 'Card_uid', 'enabled' => 1, 'visible' => -1, 'position' => 40),
+		'jours_entry' => array('type' => 'varchar(50)', 'label' => 'Jours_entry', 'enabled' => 1, 'visible' => -1, 'position' => 40),
+		'heure_entry_start' => array('type' => 'TIME', 'label' => 'Heure_entry_start', 'enabled' => 1, 'visible' => -1, 'position' => 40),
+		'heure_entry_end' => array('type' => 'TIME', 'label' => 'Heure_entry_end', 'enabled' => 1, 'visible' => -1, 'position' => 40),
 		'gender' => array('type' => 'varchar(10)', 'label' => 'Gender', 'enabled' => 1, 'visible' => -1, 'position' => 250),
 		'pass' => array('type' => 'varchar(50)', 'label' => 'Pass', 'enabled' => 1, 'visible' => -1, 'position' => 45),
 		'pass_crypted' => array('type' => 'varchar(128)', 'label' => 'Pass crypted', 'enabled' => 1, 'visible' => -1, 'position' => 50),
@@ -468,6 +493,10 @@ class Adherent extends CommonObject
 		$infos .= $langs->transnoentities("ref").": ".$this->ref."\n";
 		$infos .= $langs->transnoentities("Lastname").": ".$this->lastname."\n";
 		$infos .= $langs->transnoentities("Firstname").": ".$this->firstname."\n";
+		$infos .= $langs->transnoentities("Card_uid").": ".$this->card_uid."\n";
+		$infos .= $langs->transnoentities("Jours_entry").": ".$this->jours_entry."\n";
+		$infos .= $langs->transnoentities("Heure_entry_start").": ".$this->heure_entry_start."\n";
+		$infos .= $langs->transnoentities("Heure_entry_end").": ".$this->heure_entry_end."\n";
 		$infos .= $langs->transnoentities("Company").": ".$this->company."\n";
 		$infos .= $langs->transnoentities("Address").": ".$this->address."\n";
 		$infos .= $langs->transnoentities("Zip").": ".$this->zip."\n";
@@ -484,6 +513,7 @@ class Adherent extends CommonObject
 		$infos .= $langs->transnoentities("Birthday").": ".$birthday."\n";
 		$infos .= $langs->transnoentities("Photo").": ".$this->photo."\n";
 		$infos .= $langs->transnoentities("Public").": ".yn($this->public);
+		$infos .= $langs->transnoentities("Card_uid").": ".$this->card_uid;
 
 		// Substitutions
 		$substitutionarray = array(
@@ -503,6 +533,10 @@ class Adherent extends CommonObject
 			'__BIRTH__' => $msgishtml ? dol_htmlentitiesbr($birthday) : ($birthday ? $birthday : ''),
 			'__PHOTO__' => $msgishtml ? dol_htmlentitiesbr($this->photo) : ($this->photo ? $this->photo : ''),
 			'__LOGIN__' => $msgishtml ? dol_htmlentitiesbr($this->login) : ($this->login ? $this->login : ''),
+			'__CARD_UID__' => $msgishtml ? dol_htmlentitiesbr($this->card_uid) : ($this->card_uid ? $this->card_uid : ''),//////////////
+			'__JOURS_ENTRY__' => $msgishtml ? dol_htmlentitiesbr($this->jours_entry) : ($this->jours_entry ? $this->jours_entry : ''),//////////////
+			'__HEURES_ENTRY_START__' => $msgishtml ? dol_htmlentitiesbr($this->heure_entry_start) : ($this->heure_entry_start ? $this->heure_entry_start : ''),//////////////
+			'__HEURES_ENTRY_END__' => $msgishtml ? dol_htmlentitiesbr($this->heure_entry_end) : ($this->heure_entry_end ? $this->heure_entry_end : ''),//////////////
 			'__PASSWORD__' => $msgishtml ? dol_htmlentitiesbr($this->pass) : ($this->pass ? $this->pass : ''),
 			'__PHONE__' => $msgishtml ? dol_htmlentitiesbr($this->phone) : ($this->phone ? $this->phone : ''),
 			'__PHONEPRO__' => $msgishtml ? dol_htmlentitiesbr($this->phone_perso) : ($this->phone_perso ? $this->phone_perso : ''),
@@ -545,7 +579,12 @@ class Adherent extends CommonObject
 					}
 				}
 				$s .= '<span class="member-individual-back paddingleftimp paddingrightimp" title="'.$langs->trans("Physical").'">'.$labeltoshow.'</span>';
+
 			}
+			if ($morphy == 'card'){
+				$labeltoshow = $this->card_uid;
+				$s .= '<span class="member-card-back paddingleftimp paddingrightimp" title="'.$langs->trans("Card_uid").'">'.$labeltoshow.'</span>';
+			}/////////////////////////////////////////////////:
 			if ($morphy == 'mor') {
 				$labeltoshow = $labeltoshowm;
 				if ($addbadge == 2) {
@@ -561,7 +600,9 @@ class Adherent extends CommonObject
 				$s = $langs->trans("Physical");
 			} elseif ($morphy == 'mor') {
 				$s = $langs->trans("Moral");
-			}
+			}elseif ($morphy == 'card') {
+				$s = $trans->card_uid;
+			}////////////////////////////////////////
 		}
 
 		return $s;
@@ -605,7 +646,7 @@ class Adherent extends CommonObject
 
 		// Insert member
 		$sql = "INSERT INTO ".MAIN_DB_PREFIX."adherent";
-		$sql .= " (ref, datec,login,fk_user_author,fk_user_mod,fk_user_valid,morphy,fk_adherent_type,entity,import_key, ip)";
+		$sql .= " (ref, datec,login,fk_user_author,fk_user_mod,fk_user_valid,morphy,fk_adherent_type,entity,import_key, ip,card_uid)";
 		$sql .= " VALUES (";
 		$sql .= " '(PROV)'";
 		$sql .= ", '".$this->db->idate($this->datec)."'";
@@ -616,7 +657,18 @@ class Adherent extends CommonObject
 		$sql .= ", ".$conf->entity;
 		$sql .= ", ".(!empty($this->import_key) ? "'".$this->db->escape($this->import_key)."'" : "null");
 		$sql .= ", ".(!empty($this->ip) ? "'".$this->db->escape($this->ip)."'" : "null");
+		$sql .= ", ".(!empty($this->card_uid) ? "'".$this->db->escape($this->card_uid)."'" : "null");//////////////////////
 		$sql .= ")";
+
+		/*$sql_access = "INSERT INTO ".MAIN_DB_PREFIX."adherent_access";
+		$sql_access .= " (jours_entry, heure_entry_start, heure_entry_end)";
+		$sql_access .= " VALUES (";
+		$sql_access .= " '(PROV)'";
+		$sql_access .= " ".(!empty($this->jours_entry) ? "'".$this->db->escape($this->jours_entry)."'" : "null");
+		$sql_access .= ", ".(!empty($this->heure_entry_start) ? "'".$this->db->escape($this->heure_entry_start)."'" : "null");
+		$sql_access .= ", ".(!empty($this->heure_entry_end) ? "'".$this->db->escape($this->heure_entry_end)."'" : "null"); 
+		$sql_access .= ")";*/
+
 
 		dol_syslog(get_class($this)."::create", LOG_DEBUG);
 		$result = $this->db->query($sql);
@@ -723,7 +775,7 @@ class Adherent extends CommonObject
 
 		$this->db->begin();
 
-		$sql = "UPDATE ".MAIN_DB_PREFIX."adherent SET";
+		$sql = "UPDATE ".MAIN_DB_PREFIX."adherent SET ";
 		$sql .= " ref = '".$this->db->escape($this->ref)."'";
 		$sql .= ", civility = ".($this->civility_id ? "'".$this->db->escape($this->civility_id)."'" : "null");
 		$sql .= ", firstname = ".($this->firstname ? "'".$this->db->escape($this->firstname)."'" : "null");
@@ -734,7 +786,7 @@ class Adherent extends CommonObject
 		if ($this->socid) {
 			$sql .= ", fk_soc = ".($this->socid > 0 ? $this->db->escape($this->socid) : "null");	 // Must be modified only when creating from a third-party
 		}
-		$sql .= ", address = ".($this->address ? "'".$this->db->escape($this->address)."'" : "null");
+		
 		$sql .= ", zip = ".($this->zip ? "'".$this->db->escape($this->zip)."'" : "null");
 		$sql .= ", town = ".($this->town ? "'".$this->db->escape($this->town)."'" : "null");
 		$sql .= ", country = ".($this->country_id > 0 ? $this->db->escape($this->country_id) : "null");
@@ -754,6 +806,17 @@ class Adherent extends CommonObject
 		$sql .= ", fk_adherent_type = ".$this->db->escape($this->typeid);
 		$sql .= ", morphy = '".$this->db->escape($this->morphy)."'";
 		$sql .= ", birth = ".($this->birth ? "'".$this->db->idate($this->birth)."'" : "null");
+		$sql .= ", card_uid = ".($this->card_uid ? "'".$this->db->escape($this->card_uid)."'" : "null");////////////////
+		$sql .= ", jours_entry = ".($this->jours_entry ? "'".$this->db->escape($this->jours_entry)."'" : "null");
+		$sql .= ", heure_entry_start = ".($this->heure_entry_start ? "'".$this->db->escape($this->heure_entry_start)."'" : "null");
+		$sql .= ", heure_entry_end = ".($this->heure_entry_end ? "'".$this->db->escape($this->heure_entry_end)."'" : "null");
+		$sql .= ", address = ".($this->address ? "'".$this->db->escape($this->address)."'" : "null");
+		
+		/*$sql_access = "UPDATE ".MAIN_DB_PREFIX."adherent_access SET";
+		$sql_access .= " jours_entry = ".($this->jours_entry ? "'".$this->db->escape($this->jours_entry)."'" : "null");
+		$sql_access .= ", heure_entry_start = ".($this->heure_entry_start ? "'".$this->db->escape($this->heure_entry_start)."'" : "null");
+		$sql_access .= ", heure_entry_end = ".($this->heure_entry_end ? "'".$this->db->escape($this->heure_entry_end)."'" : "null");
+		$sql_access .= " WHERE rowid = ".$this->db->escape($this->id);*/ 
 
 		if ($this->datefin) {
 			$sql .= ", datefin = '".$this->db->idate($this->datefin)."'"; // Must be modified only when deleting a subscription
@@ -984,6 +1047,10 @@ class Adherent extends CommonObject
 			$sql .= " datefin=".($datefin != '' ? "'".$this->db->idate($datefin)."'" : "null");
 			$sql .= " WHERE rowid = ".((int) $this->id);
 
+			$sql = "UPDATE ".MAIN_DB_PREFIX."adherent_access SET";
+			$sql .= " datefin=".($datefin != '' ? "'".$this->db->idate($datefin)."'" : "null");
+			$sql .= " WHERE rowid = ".((int) $this->id);
+
 			dol_syslog(get_class($this)."::update_end_date", LOG_DEBUG);
 			$resql = $this->db->query($sql);
 			if ($resql) {
@@ -1087,6 +1154,17 @@ class Adherent extends CommonObject
 				$error++;
 				$this->error .= $this->db->lasterror();
 				$errorflag = -5;
+			}
+		}
+
+		if (!$error) {
+			$sql = "DELETE FROM ".MAIN_DB_PREFIX."list_entry WHERE rowid = ".((int) $rowid);
+			dol_syslog(get_class($this)."::delete", LOG_DEBUG);
+			$resql = $this->db->query($sql);
+			if (!$resql) {
+				$error++;
+				$this->error .= $this->db->lasterror();
+				$errorflag = -6;
 			}
 		}
 
@@ -1358,6 +1436,7 @@ class Adherent extends CommonObject
 		$sql .= " d.email, d.url, d.socialnetworks, d.phone, d.phone_perso, d.phone_mobile, d.login, d.pass, d.pass_crypted,";
 		$sql .= " d.photo, d.fk_adherent_type, d.morphy, d.entity,";
 		$sql .= " d.datec as datec,";
+		$sql .= " d.card_uid, d.jours_entry, d.heure_entry_start, d.heure_entry_end,";//////////////////////////
 		$sql .= " d.tms as datem,";
 		$sql .= " d.datefin as datefin, d.default_lang,";
 		$sql .= " d.birth as birthday,";
@@ -1369,8 +1448,10 @@ class Adherent extends CommonObject
 		$sql .= " dep.nom as state, dep.code_departement as state_code,";
 		$sql .= " t.libelle as type, t.subscription as subscription,";
 		$sql .= " u.rowid as user_id, u.login as user_login";
+		////$sql .= "a.rowid, a.jours_entry, a.heure_entry_start, a.heure_entry_end";
 		$sql .= " FROM ".MAIN_DB_PREFIX."adherent_type as t, ".MAIN_DB_PREFIX."adherent as d";
 		$sql .= " LEFT JOIN ".MAIN_DB_PREFIX."c_country as c ON d.country = c.rowid";
+		////$sql .= "LEFT JOIN ".MAIN_DB_PREFIX."adherent_access as a ON d.rowid = a.rowid";
 		$sql .= " LEFT JOIN ".MAIN_DB_PREFIX."c_departements as dep ON d.state_id = dep.rowid";
 		$sql .= " LEFT JOIN ".MAIN_DB_PREFIX."user as u ON d.rowid = u.fk_member";
 		$sql .= " WHERE d.fk_adherent_type = t.rowid";
@@ -1406,6 +1487,7 @@ class Adherent extends CommonObject
 				$this->lastname = $obj->lastname;
 				$this->gender = $obj->gender;
 				$this->login = $obj->login;
+				$this->card_uid = $obj->card_uid;///////////////////////
 				$this->societe = $obj->company;
 				$this->company = $obj->company;
 				$this->socid = $obj->fk_soc;
@@ -1421,6 +1503,10 @@ class Adherent extends CommonObject
 				$this->state_id = $obj->state_id;
 				$this->state_code = $obj->state_id ? $obj->state_code : '';
 				$this->state = $obj->state_id ? $obj->state : '';
+
+				$this->jours_entry = $obj->jours_entry;
+        		$this->heure_entry_start = $obj->heure_entry_start;
+        		$this->heure_entry_end = $obj->heure_entry_end;
 
 				$this->country_id = $obj->country_id;
 				$this->country_code = $obj->country_code;
@@ -1466,6 +1552,7 @@ class Adherent extends CommonObject
 				$this->user_login = $obj->user_login;
 
 				$this->model_pdf = $obj->model_pdf;
+				$this->card_uid = $obj->card_uid;
 
 				// Retrieve all extrafield
 				// fetch optionals attributes and labels
@@ -2237,6 +2324,18 @@ class Adherent extends CommonObject
 		if (!empty($this->login)) {
 			$label .= '<br><b>'.$langs->trans('Login').':</b> '.$this->login;
 		}
+		if (!empty($this->card_uid)) {
+			$label .= '<br><b>'.$langs->trans('Card_uid').':</b> '.$this->login;
+		}////////////////////////////////////////////////////////////
+		if (!empty($this->jours_entry)) {
+			$label .= '<br><b>'.$langs->trans('Jours_entry').':</b> '.$this->login;
+		}
+		if (!empty($this->heure_entry_start)) {
+			$label .= '<br><b>'.$langs->trans('heure_entry_start').':</b> '.$this->login;
+		}
+		if (!empty($this->heure_entry_end)) {
+			$label .= '<br><b>'.$langs->trans('Heure_entry_end').':</b> '.$this->login;
+		}
 		if (!empty($this->email)) {
 			$label .= '<br><b>'.$langs->trans('Email').':</b> '.$this->email;
 		}
@@ -2576,6 +2675,10 @@ class Adherent extends CommonObject
 		$this->specimen = 1;
 		$this->civility_id = 0;
 		$this->lastname = 'DOLIBARR';
+		$this->card_uid = '5dfd88fd5';///////////////////////
+		$this->jours_entry = 'Lundi';///////////////////////
+		$this->heure_entry_start = '9:30';///////////////////////
+		$this->heure_entry_end = '17:00';///////////////////////
 		$this->firstname = 'SPECIMEN';
 		$this->gender = 'man';
 		$this->login = 'dolibspec';
@@ -2688,7 +2791,8 @@ class Adherent extends CommonObject
 			'LDAP_MEMBER_FIELD_NAME' => 'lastname',
 			'LDAP_MEMBER_FIELD_LOGIN' => 'login',
 			'LDAP_MEMBER_FIELD_LOGIN_SAMBA' => 'login',
-			'LDAP_MEMBER_FIELD_MAIL' => 'email'
+			'LDAP_MEMBER_FIELD_MAIL' => 'email',
+			'LDAP_MEMBER_FIELD_CARD_UID' => 'card_uid'
 		);
 
 		// Member
@@ -2899,6 +3003,7 @@ class Adherent extends CommonObject
 		return CommonObject::commonReplaceThirdparty($db, $origin_id, $dest_id, $tables);
 	}
 
+	
 	/**
 	 * Return if a member is late (subscription late) or not
 	 *
