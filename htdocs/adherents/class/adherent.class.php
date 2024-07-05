@@ -79,20 +79,7 @@ class Adherent extends CommonObject
 	 */
 	public $card_uid;
 
-	/**
-	 * @var string jours_entry of member
-	 */
-	public $jours_entry;
-
-	/**
-	 * @var string heure_entry_start of member
-	 */
-	public $heure_entry_start;
-
-	/**
-	 * @var string heure_entry_end of member
-	 */
-	public $heure_entry_end;
+	
 	
 	/**
 	 * @var string jours_entry of member
@@ -457,41 +444,38 @@ class Adherent extends CommonObject
 		'firstname' => array('type' => 'varchar(50)', 'label' => 'Firstname', 'enabled' => 1, 'visible' => -1, 'position' => 35, 'showoncombobox'=>1),
 		'login' => array('type' => 'varchar(50)', 'label' => 'Login', 'enabled' => 1, 'visible' => -1, 'position' => 40),
 		'card_uid' => array('type' => 'varchar(255)', 'label' => 'Card_uid', 'enabled' => 1, 'visible' => -1, 'position' => 40),
-		'jours_entry' => array('type' => 'varchar(50)', 'label' => 'Jours_entry', 'enabled' => 1, 'visible' => -1, 'position' => 40),
-		'heure_entry_start' => array('type' => 'TIME', 'label' => 'Heure_entry_start', 'enabled' => 1, 'visible' => -1, 'position' => 40),
-		'heure_entry_end' => array('type' => 'TIME', 'label' => 'Heure_entry_end', 'enabled' => 1, 'visible' => -1, 'position' => 40),
 		
 		'oll_days_entry' => array('type' => 'varchar(50)', 'label' => 'Oll_days_entry', 'enabled' => 1, 'visible' => -1, 'position' => 40),
-		'heure_all_start' => array('type' => 'TIME', 'label' => 'Heure_all_start', 'enabled' => 1, 'visible' => -1, 'position' => 40),
-		'heure_all_end' => array('type' => 'TIME', 'label' => 'Heure_all_end', 'enabled' => 1, 'visible' => -1, 'position' => 40),
+		'heure_all_start' => array('type' => 'varchar(50)', 'label' => 'Heure_all_start', 'enabled' => 1, 'visible' => -1, 'position' => 40),
+		'heure_all_end' => array('type' => 'varchar(50)', 'label' => 'Heure_all_end', 'enabled' => 1, 'visible' => -1, 'position' => 40),
 		
 		'lundi_entry' => array('type' => 'varchar(50)', 'label' => 'Lundi_entry', 'enabled' => 1, 'visible' => -1, 'position' => 40),
-		'heure_lundi_start' => array('type' => 'TIME', 'label' => 'Heure_lundi_start', 'enabled' => 1, 'visible' => -1, 'position' => 40),
-		'heure_lundi_end' => array('type' => 'TIME', 'label' => 'Heure_lundi_end', 'enabled' => 1, 'visible' => -1, 'position' => 40),
+		'heure_lundi_start' => array('type' => 'varchar(50)', 'label' => 'Heure_lundi_start', 'enabled' => 1, 'visible' => -1, 'position' => 40),
+		'heure_lundi_end' => array('type' => 'varchar(50)', 'label' => 'Heure_lundi_end', 'enabled' => 1, 'visible' => -1, 'position' => 40),
 		
 		'mardi_entry' => array('type' => 'varchar(50)', 'label' => 'Mardi_entry', 'enabled' => 1, 'visible' => -1, 'position' => 40),
-		'heure_mardi_start' => array('type' => 'TIME', 'label' => 'Heure_mardi_start', 'enabled' => 1, 'visible' => -1, 'position' => 40),
-		'heure_mardi_end' => array('type' => 'TIME', 'label' => 'Heure_mardi_end', 'enabled' => 1, 'visible' => -1, 'position' => 40),
+		'heure_mardi_start' => array('type' => 'varchar(50)', 'label' => 'Heure_mardi_start', 'enabled' => 1, 'visible' => -1, 'position' => 40),
+		'heure_mardi_end' => array('type' => 'varchar(50)', 'label' => 'Heure_mardi_end', 'enabled' => 1, 'visible' => -1, 'position' => 40),
 		
 		'mercredi_entry' => array('type' => 'varchar(50)', 'label' => 'Mercredi_entry', 'enabled' => 1, 'visible' => -1, 'position' => 40),
-		'heure_mercredi_start' => array('type' => 'TIME', 'label' => 'Heure_mercredi_start', 'enabled' => 1, 'visible' => -1, 'position' => 40),
-		'heure_mercredi_end' => array('type' => 'TIME', 'label' => 'Heure_mercredi_end', 'enabled' => 1, 'visible' => -1, 'position' => 40),
+		'heure_mercredi_start' => array('type' => 'varchar(50)', 'label' => 'Heure_mercredi_start', 'enabled' => 1, 'visible' => -1, 'position' => 40),
+		'heure_mercredi_end' => array('type' => 'varchar(50)', 'label' => 'Heure_mercredi_end', 'enabled' => 1, 'visible' => -1, 'position' => 40),
 		
 		'jeudi_entry' => array('type' => 'varchar(50)', 'label' => 'Jeudi_entry', 'enabled' => 1, 'visible' => -1, 'position' => 40),
-		'heure_jeudi_start' => array('type' => 'TIME', 'label' => 'Heure_jeudi_start', 'enabled' => 1, 'visible' => -1, 'position' => 40),
-		'heure_jeudi_end' => array('type' => 'TIME', 'label' => 'Heure_jeudi_end', 'enabled' => 1, 'visible' => -1, 'position' => 40),
+		'heure_jeudi_start' => array('type' => 'varchar(50)', 'label' => 'Heure_jeudi_start', 'enabled' => 1, 'visible' => -1, 'position' => 40),
+		'heure_jeudi_end' => array('type' => 'varchar(50)', 'label' => 'Heure_jeudi_end', 'enabled' => 1, 'visible' => -1, 'position' => 40),
 		
 		'vendredi_entry' => array('type' => 'varchar(50)', 'label' => 'Vendredi_entry', 'enabled' => 1, 'visible' => -1, 'position' => 40),
-		'heure_vendredi_start' => array('type' => 'TIME', 'label' => 'Heure_vendredi_start', 'enabled' => 1, 'visible' => -1, 'position' => 40),
-		'heure_vendredi_end' => array('type' => 'TIME', 'label' => 'Heure_vendredi_end', 'enabled' => 1, 'visible' => -1, 'position' => 40),
+		'heure_vendredi_start' => array('type' => 'varchar(50)', 'label' => 'Heure_vendredi_start', 'enabled' => 1, 'visible' => -1, 'position' => 40),
+		'heure_vendredi_end' => array('type' => 'varchar(50)', 'label' => 'Heure_vendredi_end', 'enabled' => 1, 'visible' => -1, 'position' => 40),
 		
 		'samdi_entry' => array('type' => 'varchar(50)', 'label' => 'Samdi_entry', 'enabled' => 1, 'visible' => -1, 'position' => 40),
-		'heure_samdi_start' => array('type' => 'TIME', 'label' => 'Heure_samdi_start', 'enabled' => 1, 'visible' => -1, 'position' => 40),
-		'heure_samdi_end' => array('type' => 'TIME', 'label' => 'Heure_samdi_end', 'enabled' => 1, 'visible' => -1, 'position' => 40),
+		'heure_samdi_start' => array('type' => 'varchar(50)', 'label' => 'Heure_samdi_start', 'enabled' => 1, 'visible' => -1, 'position' => 40),
+		'heure_samdi_end' => array('type' => 'varchar(50)', 'label' => 'Heure_samdi_end', 'enabled' => 1, 'visible' => -1, 'position' => 40),
 		
 		'dimanche_entry' => array('type' => 'varchar(50)', 'label' => 'Dimanche_entry', 'enabled' => 1, 'visible' => -1, 'position' => 40),
-		'heure_dimanche_start' => array('type' => 'TIME', 'label' => 'Heure_dimanche_start', 'enabled' => 1, 'visible' => -1, 'position' => 40),
-		'heure_dimanche_end' => array('type' => 'TIME', 'label' => 'Heure_dimanche_end', 'enabled' => 1, 'visible' => -1, 'position' => 40),
+		'heure_dimanche_start' => array('type' => 'varchar(50)', 'label' => 'Heure_dimanche_start', 'enabled' => 1, 'visible' => -1, 'position' => 40),
+		'heure_dimanche_end' => array('type' => 'varchar(50)', 'label' => 'Heure_dimanche_end', 'enabled' => 1, 'visible' => -1, 'position' => 40),
 		
 		'gender' => array('type' => 'varchar(10)', 'label' => 'Gender', 'enabled' => 1, 'visible' => -1, 'position' => 250),
 		'pass' => array('type' => 'varchar(50)', 'label' => 'Pass', 'enabled' => 1, 'visible' => -1, 'position' => 45),
@@ -650,10 +634,7 @@ class Adherent extends CommonObject
 		$infos .= $langs->transnoentities("Lastname").": ".$this->lastname."\n";
 		$infos .= $langs->transnoentities("Firstname").": ".$this->firstname."\n";
 		$infos .= $langs->transnoentities("Card_uid").": ".$this->card_uid."\n";
-		$infos .= $langs->transnoentities("Jours_entry").": ".$this->jours_entry."\n";
-		$infos .= $langs->transnoentities("Heure_entry_start").": ".$this->heure_entry_start."\n";
-		$infos .= $langs->transnoentities("Heure_entry_end").": ".$this->heure_entry_end."\n";
-
+		
 		$infos .= $langs->transnoentities("Oll_days_entry").": ".$this->oll_days_entry."\n";
 		$infos .= $langs->transnoentities("Heure_all_start").": ".$this->heure_all_start."\n";
 		$infos .= $langs->transnoentities("Heure_all_end").": ".$this->heure_all_end."\n";
@@ -723,10 +704,7 @@ class Adherent extends CommonObject
 			'__PHOTO__' => $msgishtml ? dol_htmlentitiesbr($this->photo) : ($this->photo ? $this->photo : ''),
 			'__LOGIN__' => $msgishtml ? dol_htmlentitiesbr($this->login) : ($this->login ? $this->login : ''),
 			'__CARD_UID__' => $msgishtml ? dol_htmlentitiesbr($this->card_uid) : ($this->card_uid ? $this->card_uid : ''),//////////////
-			'__JOURS_ENTRY__' => $msgishtml ? dol_htmlentitiesbr($this->jours_entry) : ($this->jours_entry ? $this->jours_entry : ''),//////////////
-			'__HEURES_ENTRY_START__' => $msgishtml ? dol_htmlentitiesbr($this->heure_entry_start) : ($this->heure_entry_start ? $this->heure_entry_start : ''),//////////////
-			'__HEURES_ENTRY_END__' => $msgishtml ? dol_htmlentitiesbr($this->heure_entry_end) : ($this->heure_entry_end ? $this->heure_entry_end : ''),//////////////
-
+			
 			'__OLL_DAYS_ENTRY__' => $msgishtml ? dol_htmlentitiesbr($this->oll_days_entry) : ($this->oll_days_entry ? $this->oll_days_entry : ''),//////////////
 			'__HEURES_ALL_START__' => $msgishtml ? dol_htmlentitiesbr($this->heure_all_start) : ($this->heure_all_start ? $this->heure_all_start : ''),//////////////
 			'__HEURES_ALL_END__' => $msgishtml ? dol_htmlentitiesbr($this->heure_all_end) : ($this->heure_all_end ? $this->heure_all_end : ''),//////////////
@@ -882,14 +860,7 @@ class Adherent extends CommonObject
 		$sql .= ", ".(!empty($this->card_uid) ? "'".$this->db->escape($this->card_uid)."'" : "null");//////////////////////
 		$sql .= ")";
 
-		/*$sql_access = "INSERT INTO ".MAIN_DB_PREFIX."adherent_access";
-		$sql_access .= " (jours_entry, heure_entry_start, heure_entry_end)";
-		$sql_access .= " VALUES (";
-		$sql_access .= " '(PROV)'";
-		$sql_access .= " ".(!empty($this->jours_entry) ? "'".$this->db->escape($this->jours_entry)."'" : "null");
-		$sql_access .= ", ".(!empty($this->heure_entry_start) ? "'".$this->db->escape($this->heure_entry_start)."'" : "null");
-		$sql_access .= ", ".(!empty($this->heure_entry_end) ? "'".$this->db->escape($this->heure_entry_end)."'" : "null"); 
-		$sql_access .= ")";*/
+		
 
 
 		dol_syslog(get_class($this)."::create", LOG_DEBUG);
@@ -1029,10 +1000,7 @@ class Adherent extends CommonObject
 		$sql .= ", morphy = '".$this->db->escape($this->morphy)."'";
 		$sql .= ", birth = ".($this->birth ? "'".$this->db->idate($this->birth)."'" : "null");
 		$sql .= ", card_uid = ".($this->card_uid ? "'".$this->db->escape($this->card_uid)."'" : "null");////////////////
-		$sql .= ", jours_entry = ".($this->jours_entry ? "'".$this->db->escape($this->jours_entry)."'" : "null");
-		$sql .= ", heure_entry_start = ".($this->heure_entry_start ? "'".$this->db->escape($this->heure_entry_start)."'" : "null");
-		$sql .= ", heure_entry_end = ".($this->heure_entry_end ? "'".$this->db->escape($this->heure_entry_end)."'" : "null");
-
+		
 		$sql .= ", oll_days_entry = ".($this->oll_days_entry ? "'".$this->db->escape($this->oll_days_entry)."'" : "null");
 		$sql .= ", heure_all_start = ".($this->heure_all_start ? "'".$this->db->escape($this->heure_all_start)."'" : "null");
 		$sql .= ", heure_all_end = ".($this->heure_all_end ? "'".$this->db->escape($this->heure_all_end)."'" : "null");
@@ -1067,12 +1035,7 @@ class Adherent extends CommonObject
 
 		$sql .= ", address = ".($this->address ? "'".$this->db->escape($this->address)."'" : "null");
 		
-		/*$sql_access = "UPDATE ".MAIN_DB_PREFIX."adherent_access SET";
-		$sql_access .= " jours_entry = ".($this->jours_entry ? "'".$this->db->escape($this->jours_entry)."'" : "null");
-		$sql_access .= ", heure_entry_start = ".($this->heure_entry_start ? "'".$this->db->escape($this->heure_entry_start)."'" : "null");
-		$sql_access .= ", heure_entry_end = ".($this->heure_entry_end ? "'".$this->db->escape($this->heure_entry_end)."'" : "null");
-		$sql_access .= " WHERE rowid = ".$this->db->escape($this->id);*/ 
-
+		
 		if ($this->datefin) {
 			$sql .= ", datefin = '".$this->db->idate($this->datefin)."'"; // Must be modified only when deleting a subscription
 		}
@@ -1302,9 +1265,6 @@ class Adherent extends CommonObject
 			$sql .= " datefin=".($datefin != '' ? "'".$this->db->idate($datefin)."'" : "null");
 			$sql .= " WHERE rowid = ".((int) $this->id);
 
-			/*$sql = "UPDATE ".MAIN_DB_PREFIX."adherent_access SET";
-			$sql .= " datefin=".($datefin != '' ? "'".$this->db->idate($datefin)."'" : "null");
-			$sql .= " WHERE rowid = ".((int) $this->id);*/
 
 			dol_syslog(get_class($this)."::update_end_date", LOG_DEBUG);
 			$resql = $this->db->query($sql);
@@ -1776,7 +1736,7 @@ class Adherent extends CommonObject
 		$sql .= " d.email, d.url, d.socialnetworks, d.phone, d.phone_perso, d.phone_mobile, d.login, d.pass, d.pass_crypted,";
 		$sql .= " d.photo, d.fk_adherent_type, d.morphy, d.entity,";
 		$sql .= " d.datec as datec,";
-		$sql .= " d.card_uid, d.jours_entry, d.heure_entry_start, d.heure_entry_end,";//////////////////////////
+		$sql .= " d.card_uid,";//////////////////////////
 		$sql .= " d.oll_days_entry, d.heure_all_start, d.heure_all_end,";
 		$sql .= " d.lundi_entry, d.heure_lundi_start, d.heure_lundi_end,";
 		$sql .= " d.mardi_entry, d.heure_mardi_start, d.heure_mardi_end,";
@@ -1796,10 +1756,10 @@ class Adherent extends CommonObject
 		$sql .= " dep.nom as state, dep.code_departement as state_code,";
 		$sql .= " t.libelle as type, t.subscription as subscription,";
 		$sql .= " u.rowid as user_id, u.login as user_login";
-		////$sql .= "a.rowid, a.jours_entry, a.heure_entry_start, a.heure_entry_end";
+		
 		$sql .= " FROM ".MAIN_DB_PREFIX."adherent_type as t, ".MAIN_DB_PREFIX."adherent as d";
 		$sql .= " LEFT JOIN ".MAIN_DB_PREFIX."c_country as c ON d.country = c.rowid";
-		////$sql .= "LEFT JOIN ".MAIN_DB_PREFIX."adherent_access as a ON d.rowid = a.rowid";
+		
 		$sql .= " LEFT JOIN ".MAIN_DB_PREFIX."c_departements as dep ON d.state_id = dep.rowid";
 		$sql .= " LEFT JOIN ".MAIN_DB_PREFIX."user as u ON d.rowid = u.fk_member";
 		$sql .= " WHERE d.fk_adherent_type = t.rowid";
@@ -1852,10 +1812,7 @@ class Adherent extends CommonObject
 				$this->state_code = $obj->state_id ? $obj->state_code : '';
 				$this->state = $obj->state_id ? $obj->state : '';
 
-				$this->jours_entry = $obj->jours_entry;
-        		$this->heure_entry_start = $obj->heure_entry_start;
-        		$this->heure_entry_end = $obj->heure_entry_end;
-
+				
 				$this->oll_days_entry = $obj->oll_days_entry;
         		$this->heure_all_start = $obj->heure_all_start;
         		$this->heure_all_end = $obj->heure_all_end;
@@ -2707,15 +2664,7 @@ class Adherent extends CommonObject
 		if (!empty($this->card_uid)) {
 			$label .= '<br><b>'.$langs->trans('Card_uid').':</b> '.$this->login;
 		}////////////////////////////////////////////////////////////
-		if (!empty($this->jours_entry)) {
-			$label .= '<br><b>'.$langs->trans('Jours_entry').':</b> '.$this->login;
-		}
-		if (!empty($this->heure_entry_start)) {
-			$label .= '<br><b>'.$langs->trans('heure_entry_start').':</b> '.$this->login;
-		}
-		if (!empty($this->heure_entry_end)) {
-			$label .= '<br><b>'.$langs->trans('Heure_entry_end').':</b> '.$this->login;
-		}
+		
 
 		if (!empty($this->oll_days_entry)) {
 			$label .= '<br><b>'.$langs->trans('Oll_days_entry').':</b> '.$this->login;
