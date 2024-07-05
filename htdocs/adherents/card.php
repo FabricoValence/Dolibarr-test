@@ -303,9 +303,7 @@ if (empty($reshook)) {
 			$object->societe     = trim(GETPOST("societe", 'alphanohtml')); // deprecated
 			$object->company     = trim(GETPOST("societe", 'alphanohtml'));
 
-			$object->jours_entry = trim(GETPOST("jours_entry", 'alphanohtml'));///////
-			$object->heure_entry_start = GETPOST("heure_entry_start", 'alphanohtml');///////
-			$object->heure_entry_end = GETPOST("heure_entry_end", 'alphanohtml');///////
+			
 
 			$object->oll_days_entry = trim(GETPOST("oll_days_entry", 'alphanohtml'));///////
 			$object->heure_all_start = GETPOST("heure_all_start", 'alphanohtml');///////
@@ -493,9 +491,7 @@ if (empty($reshook)) {
 		$state_id = GETPOST("state_id", 'int');
 		$country_id = GETPOST("country_id", 'int');
 		$card_uid = GETPOST("card_uid", 'alphanohtml');////////////////
-		$jours_entry = GETPOST("jours_entry", 'alphanohtml');
-		$heure_entry_start = GETPOST("heure_entry_start", 'alphanohtml');
-		$heure_entry_end = GETPOST("heure_entry_end", 'alphanohtml');
+		
 
 		$oll_days_entry = GETPOST("oll_days_entry", 'alphanohtml');
 		$heure_all_start = GETPOST("heure_all_start", 'alphanohtml');
@@ -553,9 +549,7 @@ if (empty($reshook)) {
 		$object->lastname    = $lastname;
 		$object->gender      = $gender;
 		$object->card_uid    = $card_uid;
-		$object->jours_entry    = $jours_entry;
-		$object->heure_entry_start   = $heure_entry_start;
-		$object->heure_entry_end    = $heure_entry_end;
+		
 
 		$object->oll_days_entry    = $oll_days_entry;
 		$object->heure_all_start   = $heure_all_start;
@@ -621,9 +615,7 @@ if (empty($reshook)) {
 		$object->photo       = $photo;
 		$object->typeid      = $typeid;
 		$object->card_uid       = $card_uid;//////////////
-		$object->jours_entry    = $jours_entry;
-		$object->heure_entry_start   = $heure_entry_start;
-		$object->heure_entry_end    = $heure_entry_end;
+		
 
 		$object->oll_days_entry    = $oll_days_entry;
 		$object->heure_all_start   = $heure_all_start;
@@ -1390,7 +1382,7 @@ if (is_object($objcanvas) && $objcanvas->displayCanvasExists($action)) {
 				var checkboxSamedi = document.getElementById("checkbox_samedi");
 				var checkboxDimanche = document.getElementById("checkbox_dimanche");
 
-				var joursEntry = document.getElementById("jours_entry");
+				
 				var olldaysEntry = document.getElementById("oll_days_entry");
 				var lundiEntry = document.getElementById("lundi_entry");
 				var mardiEntry = document.getElementById("mardi_entry");
