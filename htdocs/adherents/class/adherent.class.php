@@ -94,6 +94,129 @@ class Adherent extends CommonObject
 	 */
 	public $heure_entry_end;
 	
+	/**
+	 * @var string jours_entry of member
+	 */
+	public $oll_days_entry;
+
+	/**
+	 * @var string heure_entry_start of member
+	 */
+	public $heure_all_start;
+
+	/**
+	 * @var string heure_entry_end of member
+	 */
+	public $heure_all_end;
+
+	/**
+	 * @var string jours_entry of member
+	 */
+	public $lundi_entry;
+
+	/**
+	 * @var string heure_entry_start of member
+	 */
+	public $heure_lundi_start;
+
+	/**
+	 * @var string heure_entry_end of member
+	 */
+	public $heure_lundi_end;
+
+	/**
+	 * @var string jours_entry of member
+	 */
+	public $mardi_entry;
+
+	/**
+	 * @var string heure_entry_start of member
+	 */
+	public $heure_mardi_start;
+
+	/**
+	 * @var string heure_entry_end of member
+	 */
+	public $heure_mardi_end;
+
+	/**
+	 * @var string jours_entry of member
+	 */
+	public $mercredi_entry;
+
+	/**
+	 * @var string heure_entry_start of member
+	 */
+	public $heure_mercredi_start;
+
+	/**
+	 * @var string heure_entry_end of member
+	 */
+	public $heure_mercredi_end;
+
+	/**
+	 * @var string jours_entry of member
+	 */
+	public $jeudi_entry;
+
+	/**
+	 * @var string heure_entry_start of member
+	 */
+	public $heure_jeudi_start;
+
+	/**
+	 * @var string heure_entry_end of member
+	 */
+	public $heure_jeudi_end;
+
+	/**
+	 * @var string jours_entry of member
+	 */
+	public $vendredi_entry;
+
+	/**
+	 * @var string heure_entry_start of member
+	 */
+	public $heure_vendredi_start;
+
+	/**
+	 * @var string heure_entry_end of member
+	 */
+	public $heure_vendredi_end;
+
+	/**
+	 * @var string jours_entry of member
+	 */
+	public $samdi_entry;
+
+	/**
+	 * @var string heure_entry_start of member
+	 */
+	public $heure_samdi_start;
+
+	/**
+	 * @var string heure_entry_end of member
+	 */
+	public $heure_samdi_end;
+
+	/**
+	 * @var string jours_entry of member
+	 */
+	public $dimanche_entry;
+
+	/**
+	 * @var string heure_entry_start of member
+	 */
+	public $heure_dimanche_start;
+
+	/**
+	 * @var string heure_entry_end of member
+	 */
+	public $heure_dimanche_end;
+
+	
+	
+
 
 	/**
 	 * @var string Clear password in memory
@@ -337,6 +460,39 @@ class Adherent extends CommonObject
 		'jours_entry' => array('type' => 'varchar(50)', 'label' => 'Jours_entry', 'enabled' => 1, 'visible' => -1, 'position' => 40),
 		'heure_entry_start' => array('type' => 'TIME', 'label' => 'Heure_entry_start', 'enabled' => 1, 'visible' => -1, 'position' => 40),
 		'heure_entry_end' => array('type' => 'TIME', 'label' => 'Heure_entry_end', 'enabled' => 1, 'visible' => -1, 'position' => 40),
+		
+		'oll_days_entry' => array('type' => 'varchar(50)', 'label' => 'Oll_days_entry', 'enabled' => 1, 'visible' => -1, 'position' => 40),
+		'heure_all_start' => array('type' => 'TIME', 'label' => 'Heure_all_start', 'enabled' => 1, 'visible' => -1, 'position' => 40),
+		'heure_all_end' => array('type' => 'TIME', 'label' => 'Heure_all_end', 'enabled' => 1, 'visible' => -1, 'position' => 40),
+		
+		'lundi_entry' => array('type' => 'varchar(50)', 'label' => 'Lundi_entry', 'enabled' => 1, 'visible' => -1, 'position' => 40),
+		'heure_lundi_start' => array('type' => 'TIME', 'label' => 'Heure_lundi_start', 'enabled' => 1, 'visible' => -1, 'position' => 40),
+		'heure_lundi_end' => array('type' => 'TIME', 'label' => 'Heure_lundi_end', 'enabled' => 1, 'visible' => -1, 'position' => 40),
+		
+		'mardi_entry' => array('type' => 'varchar(50)', 'label' => 'Mardi_entry', 'enabled' => 1, 'visible' => -1, 'position' => 40),
+		'heure_mardi_start' => array('type' => 'TIME', 'label' => 'Heure_mardi_start', 'enabled' => 1, 'visible' => -1, 'position' => 40),
+		'heure_mardi_end' => array('type' => 'TIME', 'label' => 'Heure_mardi_end', 'enabled' => 1, 'visible' => -1, 'position' => 40),
+		
+		'mercredi_entry' => array('type' => 'varchar(50)', 'label' => 'Mercredi_entry', 'enabled' => 1, 'visible' => -1, 'position' => 40),
+		'heure_mercredi_start' => array('type' => 'TIME', 'label' => 'Heure_mercredi_start', 'enabled' => 1, 'visible' => -1, 'position' => 40),
+		'heure_mercredi_end' => array('type' => 'TIME', 'label' => 'Heure_mercredi_end', 'enabled' => 1, 'visible' => -1, 'position' => 40),
+		
+		'jeudi_entry' => array('type' => 'varchar(50)', 'label' => 'Jeudi_entry', 'enabled' => 1, 'visible' => -1, 'position' => 40),
+		'heure_jeudi_start' => array('type' => 'TIME', 'label' => 'Heure_jeudi_start', 'enabled' => 1, 'visible' => -1, 'position' => 40),
+		'heure_jeudi_end' => array('type' => 'TIME', 'label' => 'Heure_jeudi_end', 'enabled' => 1, 'visible' => -1, 'position' => 40),
+		
+		'vendredi_entry' => array('type' => 'varchar(50)', 'label' => 'Vendredi_entry', 'enabled' => 1, 'visible' => -1, 'position' => 40),
+		'heure_vendredi_start' => array('type' => 'TIME', 'label' => 'Heure_vendredi_start', 'enabled' => 1, 'visible' => -1, 'position' => 40),
+		'heure_vendredi_end' => array('type' => 'TIME', 'label' => 'Heure_vendredi_end', 'enabled' => 1, 'visible' => -1, 'position' => 40),
+		
+		'samdi_entry' => array('type' => 'varchar(50)', 'label' => 'Samdi_entry', 'enabled' => 1, 'visible' => -1, 'position' => 40),
+		'heure_samdi_start' => array('type' => 'TIME', 'label' => 'Heure_samdi_start', 'enabled' => 1, 'visible' => -1, 'position' => 40),
+		'heure_samdi_end' => array('type' => 'TIME', 'label' => 'Heure_samdi_end', 'enabled' => 1, 'visible' => -1, 'position' => 40),
+		
+		'dimanche_entry' => array('type' => 'varchar(50)', 'label' => 'Dimanche_entry', 'enabled' => 1, 'visible' => -1, 'position' => 40),
+		'heure_dimanche_start' => array('type' => 'TIME', 'label' => 'Heure_dimanche_start', 'enabled' => 1, 'visible' => -1, 'position' => 40),
+		'heure_dimanche_end' => array('type' => 'TIME', 'label' => 'Heure_dimanche_end', 'enabled' => 1, 'visible' => -1, 'position' => 40),
+		
 		'gender' => array('type' => 'varchar(10)', 'label' => 'Gender', 'enabled' => 1, 'visible' => -1, 'position' => 250),
 		'pass' => array('type' => 'varchar(50)', 'label' => 'Pass', 'enabled' => 1, 'visible' => -1, 'position' => 45),
 		'pass_crypted' => array('type' => 'varchar(128)', 'label' => 'Pass crypted', 'enabled' => 1, 'visible' => -1, 'position' => 50),
@@ -497,6 +653,39 @@ class Adherent extends CommonObject
 		$infos .= $langs->transnoentities("Jours_entry").": ".$this->jours_entry."\n";
 		$infos .= $langs->transnoentities("Heure_entry_start").": ".$this->heure_entry_start."\n";
 		$infos .= $langs->transnoentities("Heure_entry_end").": ".$this->heure_entry_end."\n";
+
+		$infos .= $langs->transnoentities("Oll_days_entry").": ".$this->oll_days_entry."\n";
+		$infos .= $langs->transnoentities("Heure_all_start").": ".$this->heure_all_start."\n";
+		$infos .= $langs->transnoentities("Heure_all_end").": ".$this->heure_all_end."\n";
+
+		$infos .= $langs->transnoentities("Lundi_entry").": ".$this->lundi_entry."\n";
+		$infos .= $langs->transnoentities("Heure_lundi_start").": ".$this->heure_lundi_start."\n";
+		$infos .= $langs->transnoentities("Heure_lundi_end").": ".$this->heure_lundi_end."\n";
+
+		$infos .= $langs->transnoentities("Mardi_entry").": ".$this->mardi_entry."\n";
+		$infos .= $langs->transnoentities("Heure_mardi_start").": ".$this->heure_mardi_start."\n";
+		$infos .= $langs->transnoentities("Heure_mardi_end").": ".$this->heure_mardi_end."\n";
+		
+		$infos .= $langs->transnoentities("Mercredi_entry").": ".$this->mercredi_entry."\n";
+		$infos .= $langs->transnoentities("Heure_mercredi_start").": ".$this->heure_mercredi_start."\n";
+		$infos .= $langs->transnoentities("Heure_mercredi_end").": ".$this->heure_mercredi_end."\n";
+		
+		$infos .= $langs->transnoentities("Jeudi_entry").": ".$this->jeudi_entry."\n";
+		$infos .= $langs->transnoentities("Heure_jeudi_start").": ".$this->heure_jeudi_start."\n";
+		$infos .= $langs->transnoentities("Heure_jeudi_end").": ".$this->heure_jeudi_end."\n";
+
+		$infos .= $langs->transnoentities("Vendredi_entry").": ".$this->vendredi_entry."\n";
+		$infos .= $langs->transnoentities("Heure_vendredi_start").": ".$this->heure_vendredi_start."\n";
+		$infos .= $langs->transnoentities("Heure_vendredi_end").": ".$this->heure_vendredi_end."\n";
+
+		$infos .= $langs->transnoentities("Samdi_entry").": ".$this->samdi_entry."\n";
+		$infos .= $langs->transnoentities("Heure_samdi_start").": ".$this->heure_samdi_start."\n";
+		$infos .= $langs->transnoentities("Heure_samdi_end").": ".$this->heure_samdi_end."\n";
+
+		$infos .= $langs->transnoentities("Dimanche_entry").": ".$this->dimanche_entry."\n";
+		$infos .= $langs->transnoentities("Heure_dimanche_start").": ".$this->heure_dimanche_start."\n";
+		$infos .= $langs->transnoentities("Heure_dimanche_end").": ".$this->heure_dimanche_end."\n";
+
 		$infos .= $langs->transnoentities("Company").": ".$this->company."\n";
 		$infos .= $langs->transnoentities("Address").": ".$this->address."\n";
 		$infos .= $langs->transnoentities("Zip").": ".$this->zip."\n";
@@ -513,7 +702,7 @@ class Adherent extends CommonObject
 		$infos .= $langs->transnoentities("Birthday").": ".$birthday."\n";
 		$infos .= $langs->transnoentities("Photo").": ".$this->photo."\n";
 		$infos .= $langs->transnoentities("Public").": ".yn($this->public);
-		$infos .= $langs->transnoentities("Card_uid").": ".$this->card_uid;
+		
 
 		// Substitutions
 		$substitutionarray = array(
@@ -537,6 +726,39 @@ class Adherent extends CommonObject
 			'__JOURS_ENTRY__' => $msgishtml ? dol_htmlentitiesbr($this->jours_entry) : ($this->jours_entry ? $this->jours_entry : ''),//////////////
 			'__HEURES_ENTRY_START__' => $msgishtml ? dol_htmlentitiesbr($this->heure_entry_start) : ($this->heure_entry_start ? $this->heure_entry_start : ''),//////////////
 			'__HEURES_ENTRY_END__' => $msgishtml ? dol_htmlentitiesbr($this->heure_entry_end) : ($this->heure_entry_end ? $this->heure_entry_end : ''),//////////////
+
+			'__OLL_DAYS_ENTRY__' => $msgishtml ? dol_htmlentitiesbr($this->oll_days_entry) : ($this->oll_days_entry ? $this->oll_days_entry : ''),//////////////
+			'__HEURES_ALL_START__' => $msgishtml ? dol_htmlentitiesbr($this->heure_all_start) : ($this->heure_all_start ? $this->heure_all_start : ''),//////////////
+			'__HEURES_ALL_END__' => $msgishtml ? dol_htmlentitiesbr($this->heure_all_end) : ($this->heure_all_end ? $this->heure_all_end : ''),//////////////
+
+			'__LUNDI_ENTRY__' => $msgishtml ? dol_htmlentitiesbr($this->lundi_entry) : ($this->lundi_entry ? $this->lundi_entry : ''),//////////////
+			'__HEURES_LUNDI_START__' => $msgishtml ? dol_htmlentitiesbr($this->heure_lundi_start) : ($this->heure_lundi_start ? $this->heure_lundi_start : ''),//////////////
+			'__HEURES_LUNDI_END__' => $msgishtml ? dol_htmlentitiesbr($this->heure_lundi_end) : ($this->heure_lundi_end ? $this->heure_lundi_end : ''),////////
+
+			'__MARDI_ENTRY__' => $msgishtml ? dol_htmlentitiesbr($this->mardi_entry) : ($this->mardi_entry ? $this->mardi_entry : ''),//////////////
+			'__HEURES_MARDI_START__' => $msgishtml ? dol_htmlentitiesbr($this->heure_mardi_start) : ($this->heure_mardi_start ? $this->heure_mardi_start : ''),//////////////
+			'__HEURES_MARDI_END__' => $msgishtml ? dol_htmlentitiesbr($this->heure_mardi_end) : ($this->heure_mardi_end ? $this->heure_mardi_end : ''),////////
+
+			'__MECREDI_ENTRY__' => $msgishtml ? dol_htmlentitiesbr($this->mercredi_entry) : ($this->mercredi_entry ? $this->mercredi_entry : ''),//////////////
+			'__HEURES_MERCREDI_START__' => $msgishtml ? dol_htmlentitiesbr($this->heure_mercredi_start) : ($this->heure_mercredi_start ? $this->heure_mercredi_start : ''),//////////////
+			'__HEURES_MERCREDI_END__' => $msgishtml ? dol_htmlentitiesbr($this->heure_mercredi_end) : ($this->heure_mercredi_end ? $this->heure_mercredi_end : ''),////////
+
+			'__JEUDI_ENTRY__' => $msgishtml ? dol_htmlentitiesbr($this->jeudi_entry) : ($this->mercredi_entry ? $this->jeudi_entry : ''),//////////////
+			'__HEURES_JEUDI_START__' => $msgishtml ? dol_htmlentitiesbr($this->heure_jeudi_start) : ($this->heure_jeudi_start ? $this->heure_jeudi_start : ''),//////////////
+			'__HEURES_JEUDI_END__' => $msgishtml ? dol_htmlentitiesbr($this->heure_jeudi_end) : ($this->heure_jeudi_end ? $this->heure_jeudi_end : ''),////////
+
+			'__VENDREDI_ENTRY__' => $msgishtml ? dol_htmlentitiesbr($this->vendredi_entry) : ($this->mercredi_entry ? $this->vendredi_entry : ''),//////////////
+			'__HEURES_VENDREDI_START__' => $msgishtml ? dol_htmlentitiesbr($this->heure_vendredi_start) : ($this->heure_vendredi_start ? $this->heure_vendredi_start : ''),//////////////
+			'__HEURES_VENDREDI_END__' => $msgishtml ? dol_htmlentitiesbr($this->heure_vendredi_end) : ($this->heure_vendredi_end ? $this->heure_vendredi_end : ''),////////
+
+			'__SAMDI_ENTRY__' => $msgishtml ? dol_htmlentitiesbr($this->samdi_entry) : ($this->samdi_entry ? $this->samdi_entry : ''),//////////////
+			'__HEURES_SAMDI_START__' => $msgishtml ? dol_htmlentitiesbr($this->heure_samdi_start) : ($this->heure_samdi_start ? $this->heure_samdi_start : ''),//////////////
+			'__HEURES_SAMDI_END__' => $msgishtml ? dol_htmlentitiesbr($this->heure_samdi_end) : ($this->heure_samdi_end ? $this->heure_samdi_end : ''),////////
+
+			'__DIMANCHE_ENTRY__' => $msgishtml ? dol_htmlentitiesbr($this->dimanche_entry) : ($this->dimanche_entry ? $this->dimanche_entry : ''),//////////////
+			'__HEURES_DIMANCHE_START__' => $msgishtml ? dol_htmlentitiesbr($this->heure_dimanche_start) : ($this->heure_dimanche_start ? $this->heure_dimanche_start : ''),//////////////
+			'__HEURES_DIMANCHE_END__' => $msgishtml ? dol_htmlentitiesbr($this->heure_dimanche_end) : ($this->heure_dimanche_end ? $this->heure_dimanche_end : ''),////////
+			
 			'__PASSWORD__' => $msgishtml ? dol_htmlentitiesbr($this->pass) : ($this->pass ? $this->pass : ''),
 			'__PHONE__' => $msgishtml ? dol_htmlentitiesbr($this->phone) : ($this->phone ? $this->phone : ''),
 			'__PHONEPRO__' => $msgishtml ? dol_htmlentitiesbr($this->phone_perso) : ($this->phone_perso ? $this->phone_perso : ''),
@@ -581,10 +803,10 @@ class Adherent extends CommonObject
 				$s .= '<span class="member-individual-back paddingleftimp paddingrightimp" title="'.$langs->trans("Physical").'">'.$labeltoshow.'</span>';
 
 			}
-			if ($morphy == 'card'){
+			/*if ($morphy == 'card'){
 				$labeltoshow = $this->card_uid;
 				$s .= '<span class="member-card-back paddingleftimp paddingrightimp" title="'.$langs->trans("Card_uid").'">'.$labeltoshow.'</span>';
-			}/////////////////////////////////////////////////:
+			}*/////////////////////////////////////////////////:
 			if ($morphy == 'mor') {
 				$labeltoshow = $labeltoshowm;
 				if ($addbadge == 2) {
@@ -600,9 +822,9 @@ class Adherent extends CommonObject
 				$s = $langs->trans("Physical");
 			} elseif ($morphy == 'mor') {
 				$s = $langs->trans("Moral");
-			}elseif ($morphy == 'card') {
+			}/*elseif ($morphy == 'card') {
 				$s = $trans->card_uid;
-			}////////////////////////////////////////
+			}*////////////////////////////////////////
 		}
 
 		return $s;
@@ -810,6 +1032,39 @@ class Adherent extends CommonObject
 		$sql .= ", jours_entry = ".($this->jours_entry ? "'".$this->db->escape($this->jours_entry)."'" : "null");
 		$sql .= ", heure_entry_start = ".($this->heure_entry_start ? "'".$this->db->escape($this->heure_entry_start)."'" : "null");
 		$sql .= ", heure_entry_end = ".($this->heure_entry_end ? "'".$this->db->escape($this->heure_entry_end)."'" : "null");
+
+		$sql .= ", oll_days_entry = ".($this->oll_days_entry ? "'".$this->db->escape($this->oll_days_entry)."'" : "null");
+		$sql .= ", heure_all_start = ".($this->heure_all_start ? "'".$this->db->escape($this->heure_all_start)."'" : "null");
+		$sql .= ", heure_all_end = ".($this->heure_all_end ? "'".$this->db->escape($this->heure_all_end)."'" : "null");
+		
+		$sql .= ", lundi_entry = ".($this->lundi_entry ? "'".$this->db->escape($this->lundi_entry)."'" : "null");
+		$sql .= ", heure_lundi_start = ".($this->heure_lundi_start ? "'".$this->db->escape($this->heure_lundi_start)."'" : "null");
+		$sql .= ", heure_lundi_end = ".($this->heure_lundi_end ? "'".$this->db->escape($this->heure_lundi_end)."'" : "null");
+
+		$sql .= ", mardi_entry = ".($this->mardi_entry ? "'".$this->db->escape($this->mardi_entry)."'" : "null");
+		$sql .= ", heure_mardi_start = ".($this->heure_mardi_start ? "'".$this->db->escape($this->heure_mardi_start)."'" : "null");
+		$sql .= ", heure_mardi_end = ".($this->heure_mardi_end ? "'".$this->db->escape($this->heure_mardi_end)."'" : "null");
+
+		$sql .= ", mercredi_entry = ".($this->mercredi_entry ? "'".$this->db->escape($this->mercredi_entry)."'" : "null");
+		$sql .= ", heure_mercredi_start = ".($this->heure_mercredi_start ? "'".$this->db->escape($this->heure_mercredi_start)."'" : "null");
+		$sql .= ", heure_mercredi_end = ".($this->heure_mercredi_end ? "'".$this->db->escape($this->heure_mercredi_end)."'" : "null");
+
+		$sql .= ", jeudi_entry = ".($this->jeudi_entry ? "'".$this->db->escape($this->jeudi_entry)."'" : "null");
+		$sql .= ", heure_jeudi_start = ".($this->heure_jeudi_start ? "'".$this->db->escape($this->heure_jeudi_start)."'" : "null");
+		$sql .= ", heure_jeudi_end = ".($this->heure_jeudi_end ? "'".$this->db->escape($this->heure_jeudi_end)."'" : "null");
+
+		$sql .= ", vendredi_entry = ".($this->vendredi_entry ? "'".$this->db->escape($this->vendredi_entry)."'" : "null");
+		$sql .= ", heure_vendredi_start = ".($this->heure_vendredi_start ? "'".$this->db->escape($this->heure_vendredi_start)."'" : "null");
+		$sql .= ", heure_vendredi_end = ".($this->heure_vendredi_end ? "'".$this->db->escape($this->heure_vendredi_end)."'" : "null");
+
+		$sql .= ", samdi_entry = ".($this->samdi_entry ? "'".$this->db->escape($this->samdi_entry)."'" : "null");
+		$sql .= ", heure_samdi_start = ".($this->heure_samdi_start ? "'".$this->db->escape($this->heure_samdi_start)."'" : "null");
+		$sql .= ", heure_samdi_end = ".($this->heure_samdi_end ? "'".$this->db->escape($this->heure_samdi_end)."'" : "null");
+
+		$sql .= ", dimanche_entry = ".($this->dimanche_entry ? "'".$this->db->escape($this->dimanche_entry)."'" : "null");
+		$sql .= ", heure_dimanche_start = ".($this->heure_dimanche_start ? "'".$this->db->escape($this->heure_dimanche_start)."'" : "null");
+		$sql .= ", heure_dimanche_end = ".($this->heure_dimanche_end ? "'".$this->db->escape($this->heure_dimanche_end)."'" : "null");
+
 		$sql .= ", address = ".($this->address ? "'".$this->db->escape($this->address)."'" : "null");
 		
 		/*$sql_access = "UPDATE ".MAIN_DB_PREFIX."adherent_access SET";
@@ -1047,9 +1302,9 @@ class Adherent extends CommonObject
 			$sql .= " datefin=".($datefin != '' ? "'".$this->db->idate($datefin)."'" : "null");
 			$sql .= " WHERE rowid = ".((int) $this->id);
 
-			$sql = "UPDATE ".MAIN_DB_PREFIX."adherent_access SET";
+			/*$sql = "UPDATE ".MAIN_DB_PREFIX."adherent_access SET";
 			$sql .= " datefin=".($datefin != '' ? "'".$this->db->idate($datefin)."'" : "null");
-			$sql .= " WHERE rowid = ".((int) $this->id);
+			$sql .= " WHERE rowid = ".((int) $this->id);*/
 
 			dol_syslog(get_class($this)."::update_end_date", LOG_DEBUG);
 			$resql = $this->db->query($sql);
@@ -1166,6 +1421,91 @@ class Adherent extends CommonObject
 				$this->error .= $this->db->lasterror();
 				$errorflag = -6;
 			}
+		}
+
+		if (!$error) {
+			$this->db->commit();
+			return 1;
+		} else {
+			$this->db->rollback();
+			return $errorflag;
+		}
+	}
+
+	/**
+	 *  Fonction to delete card_uid a member and its data 
+	 *
+	 *  @param	int		$rowid		Id of member to delete
+	 *	@param	User	$user		User object
+	 *	@param	int		$notrigger	1=Does not execute triggers, 0= execute triggers
+	 *  @return	int					<0 if KO, 0=nothing to do, >0 if OK
+	 */
+	public function delete_card_uid($rowid, $user, $notrigger = 0)
+	{
+		global $conf, $langs;
+
+		$result = 0;
+		$error = 0;
+		$errorflag = 0;
+
+		// Check parameters
+		if (empty($rowid)) {
+			$rowid = $this->id;
+		}
+
+		$this->db->begin();
+
+		if (!$error && !$notrigger) {
+			// Call trigger
+			$result = $this->call_trigger('MEMBER_DELETE_Card_uid', $user);
+			if ($result < 0) {
+				$error++;
+			}
+			// End call triggers
+		}
+		// Remove adherent
+		if (!$error) {
+            $sql = "UPDATE ".MAIN_DB_PREFIX."adherent
+                    SET card_uid = NULL,
+                        oll_days_entry = NULL,
+                        heure_all_start = NULL,
+                        heure_all_end = NULL,
+                        lundi_entry = NULL,
+                        heure_lundi_start = NULL,
+                        heure_lundi_end = NULL,
+                        mardi_entry = NULL,
+                        heure_mardi_start = NULL,
+                        heure_mardi_end = NULL,
+                        mercredi_entry = NULL,
+                        heure_mercredi_start = NULL,
+                        heure_mercredi_end = NULL,
+                        jeudi_entry = NULL,
+                        heure_jeudi_start = NULL,
+                        heure_jeudi_end = NULL,
+                        vendredi_entry = NULL,
+                        heure_vendredi_start = NULL,
+                        heure_vendredi_end = NULL,
+                        samdi_entry = NULL,
+                        heure_samdi_start = NULL,
+                        heure_samdi_end = NULL,
+                        dimanche_entry = NULL,
+                        heure_dimanche_start = NULL,
+                        heure_dimanche_end = NULL
+                    WHERE rowid = ".((int) $rowid);
+            dol_syslog(get_class($this)."::deleteCustom", LOG_DEBUG);
+            if (!$this->db->query($sql)) {
+                $error++;
+                $this->error .= $this->db->lasterror();
+            }
+        }
+
+		if (!$error) {
+            $sql = "DELETE FROM ".MAIN_DB_PREFIX."list_entry WHERE rowid = ".((int) $rowid);
+            dol_syslog(get_class($this)."::deleteCustom", LOG_DEBUG);
+            if (!$this->db->query($sql)) {
+                $error++;
+                $this->error .= $this->db->lasterror();
+            }
 		}
 
 		if (!$error) {
@@ -1437,6 +1777,14 @@ class Adherent extends CommonObject
 		$sql .= " d.photo, d.fk_adherent_type, d.morphy, d.entity,";
 		$sql .= " d.datec as datec,";
 		$sql .= " d.card_uid, d.jours_entry, d.heure_entry_start, d.heure_entry_end,";//////////////////////////
+		$sql .= " d.oll_days_entry, d.heure_all_start, d.heure_all_end,";
+		$sql .= " d.lundi_entry, d.heure_lundi_start, d.heure_lundi_end,";
+		$sql .= " d.mardi_entry, d.heure_mardi_start, d.heure_mardi_end,";
+		$sql .= " d.mercredi_entry, d.heure_mercredi_start, d.heure_mercredi_end,";
+		$sql .= " d.jeudi_entry, d.heure_jeudi_start, d.heure_jeudi_end,";
+		$sql .= " d.vendredi_entry, d.heure_vendredi_start, d.heure_vendredi_end,";
+		$sql .= " d.samdi_entry, d.heure_samdi_start, d.heure_samdi_end,";
+		$sql .= " d.dimanche_entry, d.heure_dimanche_start, d.heure_dimanche_end,";
 		$sql .= " d.tms as datem,";
 		$sql .= " d.datefin as datefin, d.default_lang,";
 		$sql .= " d.birth as birthday,";
@@ -1507,6 +1855,38 @@ class Adherent extends CommonObject
 				$this->jours_entry = $obj->jours_entry;
         		$this->heure_entry_start = $obj->heure_entry_start;
         		$this->heure_entry_end = $obj->heure_entry_end;
+
+				$this->oll_days_entry = $obj->oll_days_entry;
+        		$this->heure_all_start = $obj->heure_all_start;
+        		$this->heure_all_end = $obj->heure_all_end;
+
+				$this->lundi_entry = $obj->lundi_entry;
+        		$this->heure_lundi_start = $obj->heure_lundi_start;
+        		$this->heure_lundi_end = $obj->heure_lundi_end;
+
+				$this->mardi_entry = $obj->mardi_entry;
+        		$this->heure_mardi_start = $obj->heure_mardi_start;
+        		$this->heure_mardi_end = $obj->heure_mardi_end;
+
+				$this->mercredi_entry = $obj->mercredi_entry;
+        		$this->heure_mercredi_start = $obj->heure_mercredi_start;
+        		$this->heure_mercredi_end = $obj->heure_mercredi_end;
+
+				$this->jeudi_entry = $obj->jeudi_entry;
+        		$this->heure_jeudi_start = $obj->heure_jeudi_start;
+        		$this->heure_jeudi_end = $obj->heure_jeudi_end;
+
+				$this->vendredi_entry = $obj->vendredi_entry;
+        		$this->heure_vendredi_start = $obj->heure_vendredi_start;
+        		$this->heure_vendredi_end = $obj->heure_vendredi_end;
+
+				$this->samdi_entry = $obj->samdi_entry;
+        		$this->heure_samdi_start = $obj->heure_samdi_start;
+        		$this->heure_samdi_end = $obj->heure_samdi_end;
+
+				$this->dimanche_entry = $obj->dimanche_entry;
+        		$this->heure_dimanche_start = $obj->heure_dimanche_start;
+        		$this->heure_dimanche_end = $obj->heure_dimanche_end;
 
 				$this->country_id = $obj->country_id;
 				$this->country_code = $obj->country_code;
@@ -2336,6 +2716,87 @@ class Adherent extends CommonObject
 		if (!empty($this->heure_entry_end)) {
 			$label .= '<br><b>'.$langs->trans('Heure_entry_end').':</b> '.$this->login;
 		}
+
+		if (!empty($this->oll_days_entry)) {
+			$label .= '<br><b>'.$langs->trans('Oll_days_entry').':</b> '.$this->login;
+		}
+		if (!empty($this->heure_all_start)) {
+			$label .= '<br><b>'.$langs->trans('heure_all_start').':</b> '.$this->login;
+		}
+		if (!empty($this->heure_all_end)) {
+			$label .= '<br><b>'.$langs->trans('Heure_all_end').':</b> '.$this->login;
+		}
+
+		if (!empty($this->lundi_entry)) {
+			$label .= '<br><b>'.$langs->trans('Lundi_entry').':</b> '.$this->login;
+		}
+		if (!empty($this->heure_lundi_start)) {
+			$label .= '<br><b>'.$langs->trans('heure_lundi_start').':</b> '.$this->login;
+		}
+		if (!empty($this->heure_lundi_end)) {
+			$label .= '<br><b>'.$langs->trans('Heure_lundi_end').':</b> '.$this->login;
+		}
+
+		if (!empty($this->mardi_entry)) {
+			$label .= '<br><b>'.$langs->trans('Mardi_entry').':</b> '.$this->login;
+		}
+		if (!empty($this->heure_mardi_start)) {
+			$label .= '<br><b>'.$langs->trans('heure_mardi_start').':</b> '.$this->login;
+		}
+		if (!empty($this->heure_mardi_end)) {
+			$label .= '<br><b>'.$langs->trans('Heure_mardi_end').':</b> '.$this->login;
+		}
+
+		if (!empty($this->mercredi_entry)) {
+			$label .= '<br><b>'.$langs->trans('Mercredi_entry').':</b> '.$this->login;
+		}
+		if (!empty($this->heure_mercredi_start)) {
+			$label .= '<br><b>'.$langs->trans('heure_mercredi_start').':</b> '.$this->login;
+		}
+		if (!empty($this->heure_mercredi_end)) {
+			$label .= '<br><b>'.$langs->trans('Heure_mercredi_end').':</b> '.$this->login;
+		}
+
+		if (!empty($this->jeudi_entry)) {
+			$label .= '<br><b>'.$langs->trans('Jeudi_entry').':</b> '.$this->login;
+		}
+		if (!empty($this->heure_jeudi_start)) {
+			$label .= '<br><b>'.$langs->trans('heure_jeudi_start').':</b> '.$this->login;
+		}
+		if (!empty($this->heure_jeudi_end)) {
+			$label .= '<br><b>'.$langs->trans('Heure_jeudi_end').':</b> '.$this->login;
+		}
+
+		if (!empty($this->vendredi_entry)) {
+			$label .= '<br><b>'.$langs->trans('Vendredi_entry').':</b> '.$this->login;
+		}
+		if (!empty($this->heure_vendredi_start)) {
+			$label .= '<br><b>'.$langs->trans('heure_vendredi_start').':</b> '.$this->login;
+		}
+		if (!empty($this->heure_vendredi_end)) {
+			$label .= '<br><b>'.$langs->trans('Heure_vendredi_end').':</b> '.$this->login;
+		}
+
+		if (!empty($this->samdi_entry)) {
+			$label .= '<br><b>'.$langs->trans('Samdi_entry').':</b> '.$this->login;
+		}
+		if (!empty($this->heure_samdi_start)) {
+			$label .= '<br><b>'.$langs->trans('heure_samdi_start').':</b> '.$this->login;
+		}
+		if (!empty($this->heure_samdi_end)) {
+			$label .= '<br><b>'.$langs->trans('Heure_samdi_end').':</b> '.$this->login;
+		}
+
+		if (!empty($this->dimanche_entry)) {
+			$label .= '<br><b>'.$langs->trans('Dimanche_entry').':</b> '.$this->login;
+		}
+		if (!empty($this->heure_dimanche_start)) {
+			$label .= '<br><b>'.$langs->trans('heure_dimanche_start').':</b> '.$this->login;
+		}
+		if (!empty($this->heure_dimanche_end)) {
+			$label .= '<br><b>'.$langs->trans('Heure_dimanche_end').':</b> '.$this->login;
+		}
+
 		if (!empty($this->email)) {
 			$label .= '<br><b>'.$langs->trans('Email').':</b> '.$this->email;
 		}
@@ -2676,9 +3137,39 @@ class Adherent extends CommonObject
 		$this->civility_id = 0;
 		$this->lastname = 'DOLIBARR';
 		$this->card_uid = '5dfd88fd5';///////////////////////
-		$this->jours_entry = 'Lundi';///////////////////////
-		$this->heure_entry_start = '9:30';///////////////////////
-		$this->heure_entry_end = '17:00';///////////////////////
+
+		$this->oll_days_entry = '1';///////////////////////
+		$this->heure_all_start = '9:30';///////////////////////
+		$this->heure_all_end = '17:00';///////////////////////
+
+		$this->lundi_entry = '1';///////////////////////
+		$this->heure_lundi_start = '9:30';///////////////////////
+		$this->heure_lundi_end = '17:00';///////////////////////
+
+		$this->mardi_entry = '1';///////////////////////
+		$this->heure_mardi_start = '9:30';///////////////////////
+		$this->heure_mardi_end = '17:00';///////////////////////
+
+		$this->mercredi_entry = '1';///////////////////////
+		$this->heure_mercredi_start = '9:30';///////////////////////
+		$this->heure_mercredi_end = '17:00';///////////////////////
+
+		$this->jeudi_entry = '1';///////////////////////
+		$this->heure_jeudi_start = '9:30';///////////////////////
+		$this->heure_jeudi_end = '17:00';///////////////////////
+
+		$this->vendredi_entry = '1';///////////////////////
+		$this->heure_vendredi_start = '9:30';///////////////////////
+		$this->heure_vendredi_end = '17:00';///////////////////////
+
+		$this->samdi_entry = '1';///////////////////////
+		$this->heure_samdi_start = '9:30';///////////////////////
+		$this->heure_samdi_end = '17:00';///////////////////////
+
+		$this->dimanche_entry = '1';///////////////////////
+		$this->heure_dimanche_start = '9:30';///////////////////////
+		$this->heure_dimanche_end = '17:00';///////////////////////
+
 		$this->firstname = 'SPECIMEN';
 		$this->gender = 'man';
 		$this->login = 'dolibspec';
