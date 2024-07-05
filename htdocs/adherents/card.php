@@ -303,6 +303,42 @@ if (empty($reshook)) {
 			$object->societe     = trim(GETPOST("societe", 'alphanohtml')); // deprecated
 			$object->company     = trim(GETPOST("societe", 'alphanohtml'));
 
+			$object->jours_entry = trim(GETPOST("jours_entry", 'alphanohtml'));///////
+			$object->heure_entry_start = GETPOST("heure_entry_start", 'alphanohtml');///////
+			$object->heure_entry_end = GETPOST("heure_entry_end", 'alphanohtml');///////
+
+			$object->oll_days_entry = trim(GETPOST("oll_days_entry", 'alphanohtml'));///////
+			$object->heure_all_start = GETPOST("heure_all_start", 'alphanohtml');///////
+			$object->heure_all_end = GETPOST("heure_all_end", 'alphanohtml');///////
+
+			$object->lundi_entry = trim(GETPOST("lundi_entry", 'alphanohtml'));///////
+			$object->heure_lundi_start = GETPOST("heure_lundi_start", 'alphanohtml');///////
+			$object->heure_lundi_end = GETPOST("heure_lundi_end", 'alphanohtml');///////
+
+			$object->mardi_entry = trim(GETPOST("mardi_entry", 'alphanohtml'));///////
+			$object->heure_mardi_start = GETPOST("heure_mardi_start", 'alphanohtml');///////
+			$object->heure_mardi_end = GETPOST("heure_mardi_end", 'alphanohtml');///////
+
+			$object->mercredi_entry = trim(GETPOST("mercredi_entry", 'alphanohtml'));///////
+			$object->heure_mercredi_start = GETPOST("heure_mercredi_start", 'alphanohtml');///////
+			$object->heure_mercredi_end = GETPOST("heure_mercredi_end", 'alphanohtml');///////
+
+			$object->jeudi_entry = trim(GETPOST("jeudi_entry", 'alphanohtml'));///////
+			$object->heure_jeudi_start = GETPOST("heure_jeudi_start", 'alphanohtml');///////
+			$object->heure_jeudi_end = GETPOST("heure_jeudi_end", 'alphanohtml');///////
+
+			$object->vendredi_entry = trim(GETPOST("vendredi_entry", 'alphanohtml'));///////
+			$object->heure_vendredi_start = GETPOST("heure_vendredi_start", 'alphanohtml');///////
+			$object->heure_vendredi_end = GETPOST("heure_vendredi_end", 'alphanohtml');///////
+
+			$object->samdi_entry = trim(GETPOST("samdi_entry", 'alphanohtml'));///////
+			$object->heure_samdi_start = GETPOST("heure_samdi_start", 'alphanohtml');///////
+			$object->heure_samdi_end = GETPOST("heure_samdi_end", 'alphanohtml');///////
+
+			$object->dimanche_entry = trim(GETPOST("dimanche_entry", 'alphanohtml'));///////
+			$object->heure_dimanche_start = GETPOST("heure_dimanche_start", 'alphanohtml');///////
+			$object->heure_dimanche_end = GETPOST("heure_dimanche_end", 'alphanohtml');///////
+
 			$object->address     = trim(GETPOST("address", 'alphanohtml'));
 			$object->zip         = trim(GETPOST("zipcode", 'alphanohtml'));
 			$object->town        = trim(GETPOST("town", 'alphanohtml'));
@@ -342,10 +378,6 @@ if (empty($reshook)) {
 			// Get status and public property
 			$object->statut      = GETPOST("statut", 'alpha');
 			$object->public      = GETPOST("public", 'alpha');
-
-			$object->jours_entry = trim(GETPOST("jours_entry", 'alphanohtml'));///////
-			$object->heure_entry_start = GETPOST("heure_entry_start", 'alphanohtml');///////
-			$object->heure_entry_end = GETPOST("heure_entry_end", 'alphanohtml');///////
 
 
 			// Fill array 'array_options' with data from add form
@@ -464,6 +496,39 @@ if (empty($reshook)) {
 		$jours_entry = GETPOST("jours_entry", 'alphanohtml');
 		$heure_entry_start = GETPOST("heure_entry_start", 'alphanohtml');
 		$heure_entry_end = GETPOST("heure_entry_end", 'alphanohtml');
+
+		$oll_days_entry = GETPOST("oll_days_entry", 'alphanohtml');
+		$heure_all_start = GETPOST("heure_all_start", 'alphanohtml');
+		$heure_all_end = GETPOST("heure_all_end", 'alphanohtml');
+
+		$lundi_entry = GETPOST("lundi_entry", 'alphanohtml');
+		$heure_lundi_start = GETPOST("heure_lundi_start", 'alphanohtml');
+		$heure_lundi_end = GETPOST("heure_lundi_end", 'alphanohtml');
+
+		$mardi_entry = GETPOST("mardi_entry", 'alphanohtml');
+		$heure_mardi_start = GETPOST("heure_mardi_start", 'alphanohtml');
+		$heure_mardi_end = GETPOST("heure_mardi_end", 'alphanohtml');
+
+		$mercredi_entry = GETPOST("mercredi_entry", 'alphanohtml');
+		$heure_mercredi_start = GETPOST("heure_mercredi_start", 'alphanohtml');
+		$heure_mercredi_end = GETPOST("heure_mercredi_end", 'alphanohtml');
+
+		$jeudi_entry = GETPOST("jeudi_entry", 'alphanohtml');
+		$heure_jeudi_start = GETPOST("heure_jeudi_start", 'alphanohtml');
+		$heure_jeudi_end = GETPOST("heure_jeudi_end", 'alphanohtml');
+
+		$vendredi_entry = GETPOST("vendredi_entry", 'alphanohtml');
+		$heure_vendredi_start = GETPOST("heure_vendredi_start", 'alphanohtml');
+		$heure_vendredi_end = GETPOST("heure_vendredi_end", 'alphanohtml');
+
+		$samdi_entry = GETPOST("samdi_entry", 'alphanohtml');
+		$heure_samdi_start = GETPOST("heure_samdi_start", 'alphanohtml');
+		$heure_samdi_end = GETPOST("heure_samdi_end", 'alphanohtml');
+
+		$dimanche_entry = GETPOST("dimanche_entry", 'alphanohtml');
+		$heure_dimanche_start = GETPOST("heure_dimanche_start", 'alphanohtml');
+		$heure_dimanche_end = GETPOST("heure_dimanche_end", 'alphanohtml');
+
 		$phone = GETPOST("phone", 'alpha');
 		$phone_perso = GETPOST("phone_perso", 'alpha');
 		$phone_mobile = GETPOST("phone_mobile", 'alpha');
@@ -491,6 +556,39 @@ if (empty($reshook)) {
 		$object->jours_entry    = $jours_entry;
 		$object->heure_entry_start   = $heure_entry_start;
 		$object->heure_entry_end    = $heure_entry_end;
+
+		$object->oll_days_entry    = $oll_days_entry;
+		$object->heure_all_start   = $heure_all_start;
+		$object->heure_all_end    = $heure_all_end;
+
+		$object->lundi_entry    = $lundi_entry;
+		$object->heure_lundi_start   = $heure_lundi_start;
+		$object->heure_lundi_end    = $heure_lundi_end;
+
+		$object->mardi_entry    = $mardi_entry;
+		$object->heure_mardi_start   = $heure_mardi_start;
+		$object->heure_mardi_end    = $heure_mardi_end;
+
+		$object->mercredi_entry    = $mercredi_entry;
+		$object->heure_mercredi_start   = $heure_mercredi_start;
+		$object->heure_mercredi_end    = $heure_mercredi_end;
+
+		$object->jeudi_entry    = $jeudi_entry;
+		$object->heure_jeudi_start   = $heure_jeudi_start;
+		$object->heure_jeudi_end    = $heure_jeudi_end;
+
+		$object->vendredi_entry    = $vendredi_entry;
+		$object->heure_vendredi_start   = $heure_vendredi_start;
+		$object->heure_vendredi_end    = $heure_vendredi_end;
+
+		$object->samdi_entry    = $samdi_entry;
+		$object->heure_samdi_start   = $heure_samdi_start;
+		$object->heure_samdi_end    = $heure_samdi_end;
+
+		$object->dimanche_entry    = $dimanche_entry;
+		$object->heure_dimanche_start   = $heure_dimanche_start;
+		$object->heure_dimanche_end    = $heure_dimanche_end;
+
 		$object->societe     = $societe; // deprecated
 		$object->company     = $societe;
 		$object->address     = $address;
@@ -526,6 +624,39 @@ if (empty($reshook)) {
 		$object->jours_entry    = $jours_entry;
 		$object->heure_entry_start   = $heure_entry_start;
 		$object->heure_entry_end    = $heure_entry_end;
+
+		$object->oll_days_entry    = $oll_days_entry;
+		$object->heure_all_start   = $heure_all_start;
+		$object->heure_all_end    = $heure_all_end;
+
+		$object->lundi_entry    = $lundi_entry;
+		$object->heure_lundi_start   = $heure_lundi_start;
+		$object->heure_lundi_end    = $heure_lundi_end;
+
+		$object->mardi_entry    = $mardi_entry;
+		$object->heure_mardi_start   = $heure_mardi_start;
+		$object->heure_mardi_end    = $heure_mardi_end;
+
+		$object->mercredi_entry    = $mercredi_entry;
+		$object->heure_mercredi_start   = $heure_mercredi_start;
+		$object->heure_mercredi_end    = $heure_mercredi_end;
+
+		$object->jeudi_entry    = $jeudi_entry;
+		$object->heure_jeudi_start   = $heure_jeudi_start;
+		$object->heure_jeudi_end    = $heure_jeudi_end;
+
+		$object->vendredi_entry    = $vendredi_entry;
+		$object->heure_vendredi_start   = $heure_vendredi_start;
+		$object->heure_vendredi_end    = $heure_vendredi_end;
+
+		$object->samdi_entry    = $samdi_entry;
+		$object->heure_samdi_start   = $heure_samdi_start;
+		$object->heure_samdi_end    = $heure_samdi_end;
+
+		$object->dimanche_entry    = $dimanche_entry;
+		$object->heure_dimanche_start   = $heure_dimanche_start;
+		$object->heure_dimanche_end    = $heure_dimanche_end;
+
 		//$object->note        = $comment;
 		$object->morphy      = $morphy;
 		$object->user_id     = $userid;
@@ -647,6 +778,24 @@ if (empty($reshook)) {
 			exit;
 		}
 	}
+/////////////////////tutnadoiz
+
+	if ($user->hasRight('adherent', 'supprimer') && $action == 'confirm_delete_card_uid' && $confirm == 'yes') {
+		$result = $object->delete_card_uid($id, $user); 
+		if ($result > 0) {
+			setEventMessages($langs->trans("RecordDeleted"), null, 'mesgs');
+			if (!empty($backtopage) && !preg_match('/'.preg_quote($_SERVER["PHP_SELF"], '/').'/', $backtopage)) {
+				header("Location: ".$backtopage);
+				exit;
+			} else {
+				header("Location: list.php");
+				exit;
+			}
+		} else {
+			setEventMessages($object->error, null, 'errors');
+		}
+	}
+
 
 	if ($user->hasRight('adherent', 'supprimer') && $action == 'confirm_delete' && $confirm == 'yes') {
 		$result = $object->delete($id, $user);
@@ -1086,152 +1235,152 @@ if (is_object($objcanvas) && $objcanvas->displayCanvasExists($action)) {
 		print '<tr><td id="tdfirstname">'.$langs->trans("Firstname").'</td><td><input type="text" name="firstname" class="minwidth300" maxlength="50" value="'.(GETPOSTISSET('firstname') ? GETPOST('firstname', 'alphanohtml') : $object->firstname).'"></td>';
 		print '</tr>';
 
-		//card_uid
-		print '<tr><td id="tdcarduid">'.$langs->trans("Card_uid").'</td><td><input type="text" name="card_uid" class="minwidth300" maxlength="50" value="'.(GETPOSTISSET('card_uid') ? GETPOST('card_uid', 'alphanohtml') : $object->card_uid).'"></td></tr>';
+		print '<tr>';
+		print '<td id="tdcarduid">'.$langs->trans("Card_uid").'</td>';
+		print '<td><input type="text" name="card_uid" id="card_uid" class="minwidth300" maxlength="50" value="'.(GETPOSTISSET('card_uid') ? GETPOST('card_uid', 'alphanohtml') : $object->card_uid).'" oninput="removeColons(this)"></td>';
+		print '</tr>';
+
 
 		
 		///////////////////////////////////////////////////////
 		print '<tr>';
 			print '<td>';
 			print '<label for="checkbox_all">Toutes les jours</label>';
-			print '<input type="checkbox" id="checkbox_all" name="checkbox_all" onchange="updateVisibility(); updateJoursEntry(); updateHeureEntries();">';
+			print '<input type="checkbox" id="checkbox_all" name="checkbox_all" onchange="updateVisibility(); updateJoursEntry(); updateHeureEntries(); updateMem();">';
 			print '</td>';
-			
 			print '<td>';
 			print '<span id="time_inputs" style="display:none;">';
 			print '<label for="start-time-all">heures d\'entrée de</label>';
-			print '<input type="text" id="tdheureentrystart_all" name="heure_entry_start_all" class="minwidth100" maxlength="5" placeholder="hh:mm" onchange="updateHeureEntries()"'.(GETPOSTISSET('heure_entry_start_all') ? ' value="'.GETPOST('heure_entry_start_all', 'alphanohtml').'"' : ' value="'.$object->heure_entry_start_all.'"').'>';
-
+			print '<input type="text" id="tdheureentrystart_all" name="heure_all_start" class="minwidth100" maxlength="5" placeholder="hh:mm" value="'.(GETPOSTISSET('heure_all_start') ? GETPOST('heure_all_start', 'alphanohtml') : $object->heure_all_start).'">';
 			print '<label for="end-time-all">à</label>';
-			print '<input type="text" id="tdheureentryend_all" name="heure_entry_end_all" class="minwidth100" maxlength="5" placeholder="hh:mm" onchange="updateHeureEntries()"'.(GETPOSTISSET('heure_entry_end_all') ? ' value="'.GETPOST('heure_entry_end_all', 'alphanohtml').'"' : ' value="'.$object->heure_entry_end_all.'"').'>';
+			print '<input type="text" id="tdheureentryend_all" name="heure_all_end" class="minwidth100" maxlength="5" placeholder="hh:mm" value="'.(GETPOSTISSET('heure_all_end') ? GETPOST('heure_all_end', 'alphanohtml') : $object->heure_all_end).'">';
 			print '</span>';
-
+			print '<input type="hidden" id="oll_days_entry" name="oll_days_entry" value="'.(GETPOSTISSET('oll_days_entry') ? GETPOST('oll_days_entry', 'alphanohtml') : $object->oll_days_entry).'">';
+			
 			print '</td>';
-		print '</tr>';
-
-
-		
+		print '</tr>';	
 //////////////////////////////////////////
 		print '<tr>';
 			print '<td><label for="checkbox_lundi">Lundi</label>';
-			print '<input type="checkbox" id="checkbox_lundi" name="checkbox_lundi" onchange="updateVisibility(); updateJoursEntry();"></td>';
-
+			print '<input type="checkbox" id="checkbox_lundi" name="checkbox_lundi" onchange="updateVisibility(); updateJoursEntry(); updateHeureEntries(); updateMem();"></td>';
 			print '<td>';
 			print '<span id="time_inputs_lundi" style="display:none;">';
 			print '<label for="start-time-lundi">heures d\'entrée de</label>';
-			print '<input type="text" id="tdheureentrystart_lundi" name="heure_entry_start_lundi" class="minwidth100" maxlength="5" placeholder="hh:mm" onchange="updateHeureEntries()"'.(GETPOSTISSET('heure_entry_start_lundi') ? ' value="'.GETPOST('heure_entry_start_lundi', 'alphanohtml').'"' : ' value="'.$object->heure_entry_start_lundi.'"').'>';
-
-
+			print '<input type="text" id="tdheureentrystart_lundi" name="heure_lundi_start" class="minwidth100" maxlength="5" placeholder="hh:mm" value="'.(GETPOSTISSET('heure_lundi_start') ? GETPOST('heure_lundi_start', 'alphanohtml') : $object->heure_lundi_start).'">';
 			print '<label for="end-time-lundi">à</label>';
-			print '<input type="text" id="tdheureentryend_lundi" name="heure_entry_end_lundi" class="minwidth100" maxlength="5" placeholder="hh:mm" onchange="updateHeureEntries()"'.(GETPOSTISSET('heure_entry_end_lundi') ? ' value="'.GETPOST('heure_entry_end_lundi', 'alphanohtml').'"' : ' value="'.$object->heure_entry_end_lundi.'"').'>';
+			print '<input type="text" id="tdheureentryend_lundi" name="heure_lundi_end" class="minwidth100" maxlength="5" placeholder="hh:mm" value="'.(GETPOSTISSET('heure_lundi_end') ? GETPOST('heure_lundi_end', 'alphanohtml') : $object->heure_lundi_end).'">';
 			print '</span>';
-
+			print '<input type="hidden" id="lundi_entry" name="lundi_entry" value="'.(GETPOSTISSET('lundi_entry_entry') ? GETPOST('lundi_entry_entry', 'alphanohtml') : $object->lundi_entry_entry).'">';
+			
 			print '</td>';
 		print '</tr>';
 		/////////////////////////////////////////////////////
 		print '<tr>';
 			print '<td><label for="checkbox_mardi">Mardi</label>';
-			print '<input type="checkbox" id="checkbox_mardi" name="checkbox_mardi" onchange="updateVisibility(); updateJoursEntry();"></td>';
-			
+			print '<input type="checkbox" id="checkbox_mardi" name="checkbox_mardi" onchange="updateVisibility(); updateJoursEntry(); updateHeureEntries(); updateMem();"></td>';
 			print '<td>';
 			print '<span id="time_inputs_mardi" style="display:none;">';
 			print '<label for="start-time-mardi">heures d\'entrée de</label>';
-			print '<input type="text" id="tdheureentrystart_mardi" name="heure_entry_start_mardi" class="minwidth100" maxlength="5" placeholder="hh:mm" onchange="updateHeureEntries()"'.(GETPOSTISSET('heure_entry_start_mardi') ? ' value="'.GETPOST('heure_entry_start_mardi', 'alphanohtml').'"' : ' value="'.$object->heure_entry_start_mardi.'"').'>';
-
+			print '<input type="text" id="tdheureentrystart_mardi" name="heure_mardi_start" class="minwidth100" maxlength="5" placeholder="hh:mm" value="'.(GETPOSTISSET('heure_mardi_start') ? GETPOST('heure_mardi_start', 'alphanohtml') : $object->heure_mardi_start).'">';
 			print '<label for="end-time-mardi">à</label>';
-			print '<input type="text" id="tdheureentryend_mardi" name="heure_entry_end_mardi" class="minwidth100" maxlength="5" placeholder="hh:mm" onchange="updateHeureEntries()"'.(GETPOSTISSET('heure_entry_end_mardi') ? ' value="'.GETPOST('heure_entry_end_mardi', 'alphanohtml').'"' : ' value="'.$object->heure_entry_end_mardi.'"').'>';
+			print '<input type="text" id="tdheureentryend_mardi" name="heure_mardi_end" class="minwidth100" maxlength="5" placeholder="hh:mm" value="'.(GETPOSTISSET('heure_mardi_end') ? GETPOST('heure_mardi_end', 'alphanohtml') : $object->heure_mardi_end).'">';
 			print '</span>';
-
+			print '<input type="hidden" id="mardi_entry" name="mardi_entry" value="'.(GETPOSTISSET('mardi_entry') ? GETPOST('mardi_entry', 'alphanohtml') : $object->mardi_entry).'">';
+			
 			print '</td>';
 		print '</tr>';
 		//////////////////////////////////////
 		print '<tr>';
 			print '<td><label for="checkbox_mercredi">Mercredi</label>';
-			print '<input type="checkbox" id="checkbox_mercredi" name="checkbox_mercredi" onchange="updateVisibility(); updateJoursEntry();"></td>';
-			
+			print '<input type="checkbox" id="checkbox_mercredi" name="checkbox_mercredi" onchange="updateVisibility(); updateJoursEntry(); updateHeureEntries(); updateMem();"></td>';
 			print '<td>';
 			print '<span id="time_inputs_mercredi" style="display:none;">';
 			print '<label for="start-time-mercredi">heures d\'entrée de</label>';
-			print '<input type="text" id="tdheureentrystart_mercredi" name="heure_entry_start_mercredi" class="minwidth100" maxlength="5" placeholder="hh:mm" onchange="updateHeureEntries()"'.(GETPOSTISSET('heure_entry_start_mercredi') ? ' value="'.GETPOST('heure_entry_start_mercredi', 'alphanohtml').'"' : ' value="'.$object->heure_entry_start_mercredi.'"').'>';
-
+			print '<input type="text" id="tdheureentrystart_mercredi" name="heure_mercredi_start" class="minwidth100" maxlength="5" placeholder="hh:mm" value="'.(GETPOSTISSET('heure_mercredi_start') ? GETPOST('heure_mercredi_start', 'alphanohtml') : $object->heure_mercredi_start).'">';
 			print '<label for="end-time-mercredi">à</label>';
-			print '<input type="text" id="tdheureentryend_mercredi" name="heure_entry_end_mercredi" class="minwidth100" maxlength="5" placeholder="hh:mm" onchange="updateHeureEntries()"'.(GETPOSTISSET('heure_entry_end_mercredi') ? ' value="'.GETPOST('heure_entry_end_mardi', 'alphanohtml').'"' : ' value="'.$object->heure_entry_end_mercredi.'"').'>';
+			print '<input type="text" id="tdheureentryend_mercredi" name="heure_mercredi_end" class="minwidth100" maxlength="5" placeholder="hh:mm" value="'.(GETPOSTISSET('heure_mercredi_end') ? GETPOST('heure_mercredi_end', 'alphanohtml') : $object->heure_mercredi_end).'">';
 			print '</span>';
-
+			print '<input type="hidden" id="mercredi_entry" name="mercredi_entry" value="'.(GETPOSTISSET('mercredi_entry') ? GETPOST('mercredi_entry', 'alphanohtml') : $object->mercredi_entry).'">';
+			
 			print '</td>';
 		print '</tr>';
 		///////////////////////////////////
 		print '<tr>';
 			print '<td><label for="checkbox_jeudi">Jeudi</label>';
-			print '<input type="checkbox" id="checkbox_jeudi" name="checkbox_jeudi" onchange="updateVisibility(); updateJoursEntry();"></td>';
-			
+			print '<input type="checkbox" id="checkbox_jeudi" name="checkbox_jeudi" onchange="updateVisibility(); updateJoursEntry(); updateHeureEntries(); updateMem();"></td>';
 			print '<td>';
 			print '<span id="time_inputs_jeudi" style="display:none;">';
-			print '<<label for="start-time-jeudi">heures d\'entrée de</label>';
-			print '<input type="text" id="tdheureentrystart_jeudi" name="heure_entry_start_jeudi" class="minwidth100" maxlength="5" placeholder="hh:mm" onchange="updateHeureEntries()"'.(GETPOSTISSET('heure_entry_start_jeudi') ? ' value="'.GETPOST('heure_entry_start_jeudi', 'alphanohtml').'"' : ' value="'.$object->heure_entry_start_jeudi.'"').'>';
-
+			print '<label for="start-time-jeudi">heures d\'entrée de</label>';
+			print '<input type="text" id="tdheureentrystart_jeudi" name="heure_jeudi_start" class="minwidth100" maxlength="5" placeholder="hh:mm" value="'.(GETPOSTISSET('heure_jeudi_start') ? GETPOST('heure_jeudi_start', 'alphanohtml') : $object->heure_jeudi_start).'">';
 			print '<label for="end-time-mardi">à</label>';
-			print '<input type="text" id="tdheureentryend_jeudi" name="heure_entry_end_jeudi" class="minwidth100" maxlength="5" placeholder="hh:mm" onchange="updateHeureEntries()"'.(GETPOSTISSET('heure_entry_end_jeudi') ? ' value="'.GETPOST('heure_entry_end_jeudi', 'alphanohtml').'"' : ' value="'.$object->heure_entry_end_jeudi.'"').'>';
+			print '<input type="text" id="tdheureentryend_jeudi" name="heure_jeudi_end" class="minwidth100" maxlength="5" placeholder="hh:mm" value="'.(GETPOSTISSET('heure_jeudi_end') ? GETPOST('heure_jeudi_end', 'alphanohtml') : $object->heure_jeudi_end).'">';
 			print '</span>';
-
+			print '<input type="hidden" id="jeudi_entry" name="jeudi_entry" value="'.(GETPOSTISSET('jeudi_entry') ? GETPOST('jeudi_entry', 'alphanohtml') : $object->jeudi_entry).'">';
+			
 			print '</td>';
 		print '</tr>';
 		////////////////////////////////////////
 		print '<tr>';
 			print '<td><label for="checkbox_vendredi">Vendredi</label>';
-			print '<input type="checkbox" id="checkbox_vendredi" name="checkbox_vendredi" onchange="updateVisibility(); updateJoursEntry();"></td>';
-			
+			print '<input type="checkbox" id="checkbox_vendredi" name="checkbox_vendredi" onchange="updateVisibility(); updateJoursEntry(); updateHeureEntries(); updateMem();"></td>';
 			print '<td>';
+
 			print '<span id="time_inputs_vendredi" style="display:none;">';
 			print '<label for="start-time-vendredi">heures d\'entrée de</label>';
-			print '<input type="text" id="tdheureentrystart_vendredi" name="heure_entry_start_vendredi" class="minwidth100" maxlength="5" placeholder="hh:mm" onchange="updateHeureEntries()"'.(GETPOSTISSET('heure_entry_start_vendredi') ? ' value="'.GETPOST('heure_entry_start_vendredi', 'alphanohtml').'"' : ' value="'.$object->heure_entry_start_vendredi.'"').'>';
-
+			print '<input type="text" id="tdheureentrystart_vendredi" name="heure_vendredi_start" class="minwidth100" maxlength="5" placeholder="hh:mm" value="'.(GETPOSTISSET('heure_vendredi_start') ? GETPOST('heure_vendredi_start', 'alphanohtml') : $object->heure_vendredi_start).'">';
 			print '<label for="end-time-vendredi">à</label>';
-			print '<input type="text" id="tdheureentryend_vendredi" name="heure_entry_end_vendredi" class="minwidth100" maxlength="5" placeholder="hh:mm" onchange="updateHeureEntries()"'.(GETPOSTISSET('heure_entry_end_vendredi') ? ' value="'.GETPOST('heure_entry_end_vendredi', 'alphanohtml').'"' : ' value="'.$object->heure_entry_end_vendredi.'"').'>';
+			print '<input type="text" id="tdheureentryend_vendredi" name="heure_vendredi_end" class="minwidth100" maxlength="5" placeholder="hh:mm" value="'.(GETPOSTISSET('heure_vendredi_end') ? GETPOST('heure_vendredi_end', 'alphanohtml') : $object->heure_vendredi_end).'">';
 			print '</span>';
 
+			print '<input type="hidden" id="vendredi_entry" name="vendredi_entry" value="'.(GETPOSTISSET('vendredi_entry') ? GETPOST('vendredi_entry', 'alphanohtml') : $object->vendredi_entry).'">';
+			
+			
 			print '</td>';
 		print '</tr>';
 		//////////////////////////////////////////:
 		print '<tr>';
 			print '<td><label for="checkbox_samedi">Samedi</label>';
-			print '<input type="checkbox" id="checkbox_samedi" name="checkbox_samedi"  onchange="updateVisibility(); updateJoursEntry();"></td>';
-			
+			print '<input type="checkbox" id="checkbox_samedi" name="checkbox_samedi"  onchange="updateVisibility(); updateJoursEntry(); updateHeureEntries(); updateMem();"></td>';
 			print '<td>';
+
 			print '<span id="time_inputs_samedi" style="display:none;">';
 			print '<label for="start-time-samedi">heures d\'entrée de</label>';
-			print '<input type="text" id="tdheureentrystart_samedi" name="heure_entry_start_samedi" class="minwidth100" maxlength="5" placeholder="hh:mm" onchange="updateHeureEntries()"'.(GETPOSTISSET('heure_entry_start_samedi') ? ' value="'.GETPOST('heure_entry_start_samedi', 'alphanohtml').'"' : ' value="'.$object->heure_entry_start_samedi.'"').'>';
-
+			print '<input type="text" id="tdheureentrystart_samedi" name="heure_samdi_start" class="minwidth100" maxlength="5" placeholder="hh:mm" value="'.(GETPOSTISSET('heure_samdi_start') ? GETPOST('heure_samdi_start', 'alphanohtml') : $object->heure_samdi_start).'">';
 			print '<label for="end-time-samedi">à</label>';
-			print '<input type="text" id="tdheureentryend_samedi" name="heure_entry_end_samedi" class="minwidth100" maxlength="5" placeholder="hh:mm" onchange="updateHeureEntries()"'.(GETPOSTISSET('heure_entry_end_samedi') ? ' value="'.GETPOST('heure_entry_end_samedi', 'alphanohtml').'"' : ' value="'.$object->heure_entry_end_samedi.'"').'>';
+			print '<input type="text" id="tdheureentryend_samedi" name="heure_samdi_end" class="minwidth100" maxlength="5" placeholder="hh:mm" value="'.(GETPOSTISSET('heure_samdi_end') ? GETPOST('heure_samdi_end', 'alphanohtml') : $object->heure_samdi_end).'">';
 			print '</span>';
 
+			print '<input type="hidden" id="samdi_entry" name="samdi_entry" value="'.(GETPOSTISSET('samdi_entry') ? GETPOST('samdi_entry', 'alphanohtml') : $object->samdi_entry).'">';
+			
+			
 			print '</td>';
 		print '</tr>';
 		////////////////////////////////////////
 		print '<tr>';
 			print '<td><label for="checkbox_dimanche">Dimanche</label>';
-			print '<input type="checkbox" id="checkbox_dimanche" name="checkbox_dimanche" onchange="updateVisibility(); updateJoursEntry();"></td>';
-			
+			print '<input type="checkbox" id="checkbox_dimanche" name="checkbox_dimanche" onchange="updateVisibility(); updateJoursEntry(); updateHeureEntries(); updateMem();"></td>';
 			print '<td>';
+
 			print '<span id="time_inputs_dimanche" style="display:none;">';
 			print '<label for="start-time-dimanche">heures d\'entrée de</label>';
-			print '<input type="text" id="tdheureentrystart_dimanche" name="heure_entry_start_dimanche" class="minwidth100" maxlength="5" placeholder="hh:mm" onchange="updateHeureEntries()"'.(GETPOSTISSET('heure_entry_start_dimanche') ? ' value="'.GETPOST('heure_entry_start_dimanche', 'alphanohtml').'"' : ' value="'.$object->heure_entry_start_dimanche.'"').'>';
-
+			print '<input type="text" id="tdheureentrystart_dimanche" name="heure_dimanche_start" class="minwidth100" maxlength="5" placeholder="hh:mm" value="'.(GETPOSTISSET('heure_dimanche_start') ? GETPOST('heure_dimanche_start', 'alphanohtml') : $object->heure_dimanche_start).'">';
 			print '<label for="end-time-dimanche">à</label>';
-			print '<input type="text" id="tdheureentryend_dimanche" name="heure_entry_end_dimanche" class="minwidth100" maxlength="5" placeholder="hh:mm" onchange="updateHeureEntries()"'.(GETPOSTISSET('heure_entry_end_dimanche') ? ' value="'.GETPOST('heure_entry_end_dimanche', 'alphanohtml').'"' : ' value="'.$object->heure_entry_end_dimanche.'"').'>';
+			print '<input type="text" id="tdheureentryend_dimanche" name="heure_dimanche_end" class="minwidth100" maxlength="5" placeholder="hh:mm" value="'.(GETPOSTISSET('heure_dimanche_end') ? GETPOST('heure_dimanche_end', 'alphanohtml') : $object->heure_dimanche_end).'">';
 			print '</span>';
 
+			print '<input type="hidden" id="dimanche_entry" name="dimanche_entry" value="'.(GETPOSTISSET('dimanche_entry') ? GETPOST('dimanche_entry', 'alphanohtml') : $object->dimanche_entry).'">';
+			
+			
 			print '</td>';
 		print '</tr>';
-
-
-		print '<input type="hidden" id="jours_entry" name="jours_entry" value="'.(GETPOSTISSET('jours_entry') ? GETPOST('jours_entry', 'alphanohtml') : $object->jours_entry).'">';
-		print '<input type="hidden" id="heure_entry_start" name="heure_entry_start" value="'.(GETPOSTISSET('heure_entry_start') ? GETPOST('heure_entry_start', 'alphanohtml') : $object->heure_entry_start).'">';
-		print '<input type="hidden" id="heure_entry_end" name="heure_entry_end" value="'.(GETPOSTISSET('heure_entry_end') ? GETPOST('heure_entry_end', 'alphanohtml') : $object->heure_entry_end).'">';
-
 		print '<script>
+
+			function removeColons(input) {
+				input.value = input.value.replace(/:/g, "");
+			}
+
 			function updateJoursEntry() {
+
 				var checkboxAll = document.getElementById("checkbox_all");
 				var checkboxLundi = document.getElementById("checkbox_lundi");
 				var checkboxMardi = document.getElementById("checkbox_mardi");
@@ -1240,9 +1389,18 @@ if (is_object($objcanvas) && $objcanvas->displayCanvasExists($action)) {
 				var checkboxVendredi = document.getElementById("checkbox_vendredi");
 				var checkboxSamedi = document.getElementById("checkbox_samedi");
 				var checkboxDimanche = document.getElementById("checkbox_dimanche");
-				var joursEntry = document.getElementById("jours_entry");
 
-				var allValue = checkboxAll.checked ? "1,1,1,1,1,1,1" : "0";
+				var joursEntry = document.getElementById("jours_entry");
+				var olldaysEntry = document.getElementById("oll_days_entry");
+				var lundiEntry = document.getElementById("lundi_entry");
+				var mardiEntry = document.getElementById("mardi_entry");
+				var mercrediEntry = document.getElementById("mercredi_entry");
+				var jeudiEntry = document.getElementById("jeudi_entry");
+				var vendrediEntry = document.getElementById("vendredi_entry");
+				var samdiEntry = document.getElementById("samdi_entry");
+				var dimancheEntry = document.getElementById("dimanche_entry");
+
+				var allValue = checkboxAll.checked ? "1" : "0";
 				var lundiValue = checkboxLundi.checked ? "1" : "0";
 				var mardiValue = checkboxMardi.checked ? "1" : "0";
 				var mercrediValue = checkboxMercredi.checked ? "1" : "0";
@@ -1252,50 +1410,35 @@ if (is_object($objcanvas) && $objcanvas->displayCanvasExists($action)) {
 				var dimancheValue = checkboxDimanche.checked ? "1" : "0";
 
 				if (checkboxAll.checked) {
-					joursEntry.value = allValue ;
+					olldaysEntry.value = allValue ;
 				} else {
-					joursEntry.value = lundiValue + "," + mardiValue + "," + mercrediValue + "," + jeudiValue + "," + vendrediValue + "," + samediValue + "," + dimancheValue ;
-				}
-			}
+					if (checkboxLundi.checked) {
+						lundiEntry.value = lundiValue ;
+					}
+					if (checkboxMardi.checked) {
+						mardiEntry.value = mardiValue ;
+					}
 
-			function updateHeureEntries() {
-
-				var checkboxAll = document.getElementById("checkbox_all");
-
-				var startTimeAll = document.getElementById("tdheureentrystart_all").value;
-				var endTimeAll = document.getElementById("tdheureentryend_all").value ;
-				var startTimeLundi = document.getElementById("tdheureentrystart_lundi").value || "null";
-				var endTimeLundi = document.getElementById("tdheureentryend_lundi").value || "null";
-				var startTimeMardi = document.getElementById("tdheureentrystart_mardi").value || "null";
-				var endTimeMardi = document.getElementById("tdheureentryend_mardi").value || "null";
-				var startTimeMercredi = document.getElementById("tdheureentrystart_mercredi").value || "null";
-				var endTimeMercredi = document.getElementById("tdheureentryend_mercredi").value || "null";
-				var startTimeJeudi = document.getElementById("tdheureentrystart_jeudi").value || "null";
-				var endTimeJeudi = document.getElementById("tdheureentryend_jeudi").value || "null";
-				var startTimeVendredi = document.getElementById("tdheureentrystart_vendredi").value || "null";
-				var endTimeVendredi = document.getElementById("tdheureentryend_vendredi").value || "null";
-				var startTimeSamedi = document.getElementById("tdheureentrystart_samedi").value || "null";
-				var endTimeSamedi = document.getElementById("tdheureentryend_samedi").value || "null";
-				var startTimeDimanche = document.getElementById("tdheureentrystart_dimanche").value || "null";
-				var endTimeDimanche = document.getElementById("tdheureentryend_dimanche").value || "null";
-
-				var heureEntryStart = document.getElementById("heure_entry_start");
-				var heureEntryEnd = document.getElementById("heure_entry_end");
-
-				// Concatenate times for both days in the hidden fields
-
-				
-				if (checkboxAll.checked) {
-					heureEntryStart.value = startTimeAll;
-					heureEntryEnd.value = endTimeAll;
-				} else {
-					heureEntryStart.value = startTimeLundi + ";" + startTimeMardi + ";" + startTimeMercredi + ";" + startTimeJeudi + ";" + startTimeVendredi + ";" + startTimeSamedi + ";" + startTimeDimanche;
-					heureEntryEnd.value = endTimeLundi + ";" + endTimeMardi + ";" + endTimeMercredi + ";" + endTimeJeudi + ";" + endTimeVendredi + ";" + endTimeSamedi + ";" + endTimeDimanche;
-        		}
-
+					if (checkboxMercredi.checked) {
+						mercrediEntry.value = mercrediValue ;
+					}
+					if (checkboxJeudi.checked) {
+						jeudiEntry.value = jeudiValue ;
+					}
+					if (checkboxVendredi.checked) {
+						vendrediEntry.value = vendrediValue ;
+					}
+					if (checkboxSamedi.checked) {
+						samdiEntry.value = samediValue ;
+					}
+					if (checkboxDimanche.checked) {
+						dimancheEntry.value = dimancheValue ;
+					}
+				} 
 			}
 			
 			function updateVisibility() {
+
 				var checkbox = document.getElementById("checkbox_all");
 				var timeInputs = document.getElementById("time_inputs");
 				var checkboxLundi = document.getElementById("checkbox_lundi");
@@ -1312,49 +1455,41 @@ if (is_object($objcanvas) && $objcanvas->displayCanvasExists($action)) {
 				var timeInputsSamedi = document.getElementById("time_inputs_samedi");
 				var checkboxDimanche = document.getElementById("checkbox_dimanche");
 				var timeInputsDimanche = document.getElementById("time_inputs_dimanche");
-				
 				if (checkbox.checked) {
 					timeInputs.style.display = "inline";
 				} else {
 					timeInputs.style.display = "none";
 				}
-
 				if (checkboxLundi.checked) {
 					timeInputsLundi.style.display = "inline";
 				} else {
 					timeInputsLundi.style.display = "none";
 				}
-
 				if (checkboxMardi.checked) {
 					timeInputsMardi.style.display = "inline";
 				} else {
 					timeInputsMardi.style.display = "none";
 				}
-
 				if (checkboxMercredi.checked) {
 					timeInputsMercredi.style.display = "inline";
 				} else {
 					timeInputsMercredi.style.display = "none";
 				}
-
 				if (checkboxJeudi.checked) {
 					timeInputsJeudi.style.display = "inline";
 				} else {
 					timeInputsJeudi.style.display = "none";
 				}
-
 				if (checkboxVendredi.checked) {
 					timeInputsVendredi.style.display = "inline";
 				} else {
 					timeInputsVendredi.style.display = "none";
 				}
-
 				if (checkboxSamedi.checked) {
 					timeInputsSamedi.style.display = "inline";
 				} else {
 					timeInputsSamedi.style.display = "none";
 				}
-
 				if (checkboxDimanche.checked) {
 					timeInputsDimanche.style.display = "inline";
 				} else {
@@ -1362,12 +1497,10 @@ if (is_object($objcanvas) && $objcanvas->displayCanvasExists($action)) {
 				}
 			}
 
-
-				
-			
 			
 
-			</script>';
+			
+		</script>';
 
 
 		
@@ -1607,286 +1740,126 @@ if (is_object($objcanvas) && $objcanvas->displayCanvasExists($action)) {
 		print '</tr>';
 
 		//card_uid
-		print '<tr><td id="tdcarduid">'.$langs->trans("Card_uid").'</td><td><input type="text" name="card_uid" class="minwidth300" maxlength="50" value="'.(GETPOSTISSET('card_uid') ? GETPOST('card_uid', 'alphanohtml') : $object->card_uid).'"></td>';
-		print '</tr>';
-///////////////////////////////////////////////////////
+		/////////////tutnadoiz
+		print '<tr>';
+		print '<td id="tdcarduid">'.$langs->trans("Card_uid").'</td>';
+		print '<td><input type="text" name="card_uid" id="card_uid" class="minwidth300" maxlength="50" value="'.(GETPOSTISSET('card_uid') ? GETPOST('card_uid', 'alphanohtml') : $object->card_uid).'" oninput="removeColons(this)">';
+		if ($user->hasRight('adherent', 'supprimer')) {
+			print ' <a class="butActionDeleteCard_uid" href="card.php?rowid='.((int) $object->id).'&action=delete_card_uid&token='.newToken().'">'.$langs->trans("Delete").'</a>';
+		} else {
+			print ' <span class="butActionRefusedCard_uid classfortooltip" title="'.dol_escape_htmltag($langs->trans("NotEnoughPermissions")).'">'.$langs->trans("Delete").'</span>';
+		}		
+		print '</td></tr>';
+
+////////////////////////////////////////////////////
+
+		
+		function isChecked($value) {
+			return $value == '1' ? 'checked' : '';
+		}
+
+		
+		$oll_days_entry = GETPOSTISSET('oll_days_entry') ? GETPOST('oll_days_entry', 'alphanohtml') : $object->oll_days_entry;
+		$lundi_entry = GETPOSTISSET('lundi_entry') ? GETPOST('lundi_entry', 'alphanohtml') : $object->lundi_entry;
+		$mardi_entry = GETPOSTISSET('mardi_entry') ? GETPOST('mardi_entry', 'alphanohtml') : $object->mardi_entry;
+		$mercredi_entry = GETPOSTISSET('mercredi_entry') ? GETPOST('mercredi_entry', 'alphanohtml') : $object->mercredi_entry;
+		$jeudi_entry = GETPOSTISSET('jeudi_entry') ? GETPOST('jeudi_entry', 'alphanohtml') : $object->jeudi_entry;
+		$vendredi_entry = GETPOSTISSET('vendredi_entry') ? GETPOST('vendredi_entry', 'alphanohtml') : $object->vendredi_entry;
+		$samdi_entry = GETPOSTISSET('samdi_entry') ? GETPOST('samdi_entry', 'alphanohtml') : $object->samdi_entry;
+		$dimanche_entry = GETPOSTISSET('dimanche_entry') ? GETPOST('dimanche_entry', 'alphanohtml') : $object->dimanche_entry;
+
 		print '<tr>';
 			print '<td>';
 			print '<label for="checkbox_all">Toutes les jours</label>';
-			print '<input type="checkbox" id="checkbox_all" name="checkbox_all" onchange="updateVisibility(); updateJoursEntry(); updateHeureEntries();">';
+			print '<input type="checkbox" id="checkbox_all" name="checkbox_all" '.isChecked($oll_days_entry).' onchange="updateVisibility(); updateJoursEntry(); updateHeureEntries();">';
 			print '</td>';
-			
 			print '<td>';
 			print '<span id="time_inputs" style="display:none;">';
 			print '<label for="start-time-all">heures d\'entrée de</label>';
-			print '<input type="text" id="tdheureentrystart_all" name="heure_entry_start_all" class="minwidth100" maxlength="5" placeholder="hh:mm" onchange="updateHeureEntries()"'.(GETPOSTISSET('heure_entry_start_all') ? ' value="'.GETPOST('heure_entry_start_all', 'alphanohtml').'"' : ' value="'.$object->heure_entry_start_all.'"').'>';
-
+			print '<input type="text" id="tdheureentrystart_all" name="heure_all_start" class="minwidth100" maxlength="5" placeholder="hh:mm" value="'.(GETPOSTISSET('heure_all_start') ? GETPOST('heure_all_start', 'alphanohtml') : $object->heure_all_start).'">';
 			print '<label for="end-time-all">à</label>';
-			print '<input type="text" id="tdheureentryend_all" name="heure_entry_end_all" class="minwidth100" maxlength="5" placeholder="hh:mm" onchange="updateHeureEntries()"'.(GETPOSTISSET('heure_entry_end_all') ? ' value="'.GETPOST('heure_entry_end_all', 'alphanohtml').'"' : ' value="'.$object->heure_entry_end_all.'"').'>';
+			print '<input type="text" id="tdheureentryend_all" name="heure_all_end" class="minwidth100" maxlength="5" placeholder="hh:mm" value="'.(GETPOSTISSET('heure_all_end') ? GETPOST('heure_all_end', 'alphanohtml') : $object->heure_all_end).'">';
 			print '</span>';
-
+			print '<input type="hidden" id="oll_days_entry" name="oll_days_entry" value="'.$oll_days_entry.'">';
 			print '</td>';
 		print '</tr>';
 
+		$jours = ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samdi', 'dimanche'];
+		foreach ($jours as $jour) {
+			$jour_entry = ${$jour . '_entry'};
+			print '<tr>';
+				print '<td><label for="checkbox_'.$jour.'">'.ucfirst($jour).'</label>';
+				print '<input type="checkbox" id="checkbox_'.$jour.'" name="checkbox_'.$jour.'" '.isChecked($jour_entry).' onchange="updateVisibility(); updateJoursEntry(); updateHeureEntries();"></td>';
+				print '<td>';
+				print '<span id="time_inputs_'.$jour.'" style="display:none;">';
+				print '<label for="start-time-'.$jour.'">heures d\'entrée de</label>';
+				print '<input type="text" id="tdheureentrystart_'.$jour.'" name="heure_'.$jour.'_start" class="minwidth100" maxlength="5" placeholder="hh:mm" value="'.(GETPOSTISSET('heure_'.$jour.'_start') ? GETPOST('heure_'.$jour.'_start', 'alphanohtml') : $object->{'heure_'.$jour.'_start'}).'">';
+				print '<label for="end-time-'.$jour.'">à</label>';
+				print '<input type="text" id="tdheureentryend_'.$jour.'" name="heure_'.$jour.'_end" class="minwidth100" maxlength="5" placeholder="hh:mm" value="'.(GETPOSTISSET('heure_'.$jour.'_end') ? GETPOST('heure_'.$jour.'_end', 'alphanohtml') : $object->{'heure_'.$jour.'_end'}).'">';
+				print '</span>';
+				print '<input type="hidden" id="'.$jour.'_entry" name="'.$jour.'_entry" value="'.$jour_entry.'">';
+				print '</td>';
+			print '</tr>';
+		}
 
-		
-//////////////////////////////////////////
-		print '<tr>';
-			print '<td><label for="checkbox_lundi">Lundi</label>';
-			print '<input type="checkbox" id="checkbox_lundi" name="checkbox_lundi" onchange="updateVisibility(); updateJoursEntry();"></td>';
-
-			print '<td>';
-			print '<span id="time_inputs_lundi" style="display:none;">';
-			print '<label for="start-time-lundi">heures d\'entrée de</label>';
-			print '<input type="text" id="tdheureentrystart_lundi" name="heure_entry_start_lundi" class="minwidth100" maxlength="5" placeholder="hh:mm" onchange="updateHeureEntries()"'.(GETPOSTISSET('heure_entry_start_lundi') ? ' value="'.GETPOST('heure_entry_start_lundi', 'alphanohtml').'"' : ' value="'.$object->heure_entry_start_lundi.'"').'>';
-
-
-			print '<label for="end-time-lundi">à</label>';
-			print '<input type="text" id="tdheureentryend_lundi" name="heure_entry_end_lundi" class="minwidth100" maxlength="5" placeholder="hh:mm" onchange="updateHeureEntries()"'.(GETPOSTISSET('heure_entry_end_lundi') ? ' value="'.GETPOST('heure_entry_end_lundi', 'alphanohtml').'"' : ' value="'.$object->heure_entry_end_lundi.'"').'>';
-			print '</span>';
-
-			print '</td>';
-		print '</tr>';
-		/////////////////////////////////////////////////////
-		print '<tr>';
-			print '<td><label for="checkbox_mardi">Mardi</label>';
-			print '<input type="checkbox" id="checkbox_mardi" name="checkbox_mardi" onchange="updateVisibility(); updateJoursEntry();"></td>';
-			
-			print '<td>';
-			print '<span id="time_inputs_mardi" style="display:none;">';
-			print '<label for="start-time-mardi">heures d\'entrée de</label>';
-			print '<input type="text" id="tdheureentrystart_mardi" name="heure_entry_start_mardi" class="minwidth100" maxlength="5" placeholder="hh:mm" onchange="updateHeureEntries()"'.(GETPOSTISSET('heure_entry_start_mardi') ? ' value="'.GETPOST('heure_entry_start_mardi', 'alphanohtml').'"' : ' value="'.$object->heure_entry_start_mardi.'"').'>';
-
-			print '<label for="end-time-mardi">à</label>';
-			print '<input type="text" id="tdheureentryend_mardi" name="heure_entry_end_mardi" class="minwidth100" maxlength="5" placeholder="hh:mm" onchange="updateHeureEntries()"'.(GETPOSTISSET('heure_entry_end_mardi') ? ' value="'.GETPOST('heure_entry_end_mardi', 'alphanohtml').'"' : ' value="'.$object->heure_entry_end_mardi.'"').'>';
-			print '</span>';
-
-			print '</td>';
-		print '</tr>';
-		//////////////////////////////////////
-		print '<tr>';
-			print '<td><label for="checkbox_mercredi">Mercredi</label>';
-			print '<input type="checkbox" id="checkbox_mercredi" name="checkbox_mercredi" onchange="updateVisibility(); updateJoursEntry();"></td>';
-			
-			print '<td>';
-			print '<span id="time_inputs_mercredi" style="display:none;">';
-			print '<label for="start-time-mercredi">heures d\'entrée de</label>';
-			print '<input type="text" id="tdheureentrystart_mercredi" name="heure_entry_start_mercredi" class="minwidth100" maxlength="5" placeholder="hh:mm" onchange="updateHeureEntries()"'.(GETPOSTISSET('heure_entry_start_mercredi') ? ' value="'.GETPOST('heure_entry_start_mercredi', 'alphanohtml').'"' : ' value="'.$object->heure_entry_start_mercredi.'"').'>';
-
-			print '<label for="end-time-mercredi">à</label>';
-			print '<input type="text" id="tdheureentryend_mercredi" name="heure_entry_end_mercredi" class="minwidth100" maxlength="5" placeholder="hh:mm" onchange="updateHeureEntries()"'.(GETPOSTISSET('heure_entry_end_mercredi') ? ' value="'.GETPOST('heure_entry_end_mardi', 'alphanohtml').'"' : ' value="'.$object->heure_entry_end_mercredi.'"').'>';
-			print '</span>';
-
-			print '</td>';
-		print '</tr>';
-		///////////////////////////////////
-		print '<tr>';
-			print '<td><label for="checkbox_jeudi">Jeudi</label>';
-			print '<input type="checkbox" id="checkbox_jeudi" name="checkbox_jeudi" onchange="updateVisibility(); updateJoursEntry();"></td>';
-			
-			print '<td>';
-			print '<span id="time_inputs_jeudi" style="display:none;">';
-			print '<<label for="start-time-jeudi">heures d\'entrée de</label>';
-			print '<input type="text" id="tdheureentrystart_jeudi" name="heure_entry_start_jeudi" class="minwidth100" maxlength="5" placeholder="hh:mm" onchange="updateHeureEntries()"'.(GETPOSTISSET('heure_entry_start_jeudi') ? ' value="'.GETPOST('heure_entry_start_jeudi', 'alphanohtml').'"' : ' value="'.$object->heure_entry_start_jeudi.'"').'>';
-
-			print '<label for="end-time-mardi">à</label>';
-			print '<input type="text" id="tdheureentryend_jeudi" name="heure_entry_end_jeudi" class="minwidth100" maxlength="5" placeholder="hh:mm" onchange="updateHeureEntries()"'.(GETPOSTISSET('heure_entry_end_jeudi') ? ' value="'.GETPOST('heure_entry_end_jeudi', 'alphanohtml').'"' : ' value="'.$object->heure_entry_end_jeudi.'"').'>';
-			print '</span>';
-
-			print '</td>';
-		print '</tr>';
-		////////////////////////////////////////
-		print '<tr>';
-			print '<td><label for="checkbox_vendredi">Vendredi</label>';
-			print '<input type="checkbox" id="checkbox_vendredi" name="checkbox_vendredi" onchange="updateVisibility(); updateJoursEntry();"></td>';
-			
-			print '<td>';
-			print '<span id="time_inputs_vendredi" style="display:none;">';
-			print '<label for="start-time-vendredi">heures d\'entrée de</label>';
-			print '<input type="text" id="tdheureentrystart_vendredi" name="heure_entry_start_vendredi" class="minwidth100" maxlength="5" placeholder="hh:mm" onchange="updateHeureEntries()"'.(GETPOSTISSET('heure_entry_start_vendredi') ? ' value="'.GETPOST('heure_entry_start_vendredi', 'alphanohtml').'"' : ' value="'.$object->heure_entry_start_vendredi.'"').'>';
-
-			print '<label for="end-time-vendredi">à</label>';
-			print '<input type="text" id="tdheureentryend_vendredi" name="heure_entry_end_vendredi" class="minwidth100" maxlength="5" placeholder="hh:mm" onchange="updateHeureEntries()"'.(GETPOSTISSET('heure_entry_end_vendredi') ? ' value="'.GETPOST('heure_entry_end_vendredi', 'alphanohtml').'"' : ' value="'.$object->heure_entry_end_vendredi.'"').'>';
-			print '</span>';
-
-			print '</td>';
-		print '</tr>';
-		//////////////////////////////////////////:
-		print '<tr>';
-			print '<td><label for="checkbox_samedi">Samedi</label>';
-			print '<input type="checkbox" id="checkbox_samedi" name="checkbox_samedi"  onchange="updateVisibility(); updateJoursEntry();"></td>';
-			
-			print '<td>';
-			print '<span id="time_inputs_samedi" style="display:none;">';
-			print '<label for="start-time-samedi">heures d\'entrée de</label>';
-			print '<input type="text" id="tdheureentrystart_samedi" name="heure_entry_start_samedi" class="minwidth100" maxlength="5" placeholder="hh:mm" onchange="updateHeureEntries()"'.(GETPOSTISSET('heure_entry_start_samedi') ? ' value="'.GETPOST('heure_entry_start_samedi', 'alphanohtml').'"' : ' value="'.$object->heure_entry_start_samedi.'"').'>';
-
-			print '<label for="end-time-samedi">à</label>';
-			print '<input type="text" id="tdheureentryend_samedi" name="heure_entry_end_samedi" class="minwidth100" maxlength="5" placeholder="hh:mm" onchange="updateHeureEntries()"'.(GETPOSTISSET('heure_entry_end_samedi') ? ' value="'.GETPOST('heure_entry_end_samedi', 'alphanohtml').'"' : ' value="'.$object->heure_entry_end_samedi.'"').'>';
-			print '</span>';
-
-			print '</td>';
-		print '</tr>';
-		////////////////////////////////////////
-		print '<tr>';
-			print '<td><label for="checkbox_dimanche">Dimanche</label>';
-			print '<input type="checkbox" id="checkbox_dimanche" name="checkbox_dimanche" onchange="updateVisibility(); updateJoursEntry();"></td>';
-			
-			print '<td>';
-			print '<span id="time_inputs_dimanche" style="display:none;">';
-			print '<label for="start-time-dimanche">heures d\'entrée de</label>';
-			print '<input type="text" id="tdheureentrystart_dimanche" name="heure_entry_start_dimanche" class="minwidth100" maxlength="5" placeholder="hh:mm" onchange="updateHeureEntries()"'.(GETPOSTISSET('heure_entry_start_dimanche') ? ' value="'.GETPOST('heure_entry_start_dimanche', 'alphanohtml').'"' : ' value="'.$object->heure_entry_start_dimanche.'"').'>';
-
-			print '<label for="end-time-dimanche">à</label>';
-			print '<input type="text" id="tdheureentryend_dimanche" name="heure_entry_end_dimanche" class="minwidth100" maxlength="5" placeholder="hh:mm" onchange="updateHeureEntries()"'.(GETPOSTISSET('heure_entry_end_dimanche') ? ' value="'.GETPOST('heure_entry_end_dimanche', 'alphanohtml').'"' : ' value="'.$object->heure_entry_end_dimanche.'"').'>';
-			print '</span>';
-
-			print '</td>';
-		print '</tr>';
-
-
-		print '<input type="hidden" id="jours_entry" name="jours_entry" value="'.(GETPOSTISSET('jours_entry') ? GETPOST('jours_entry', 'alphanohtml') : $object->jours_entry).'">';
-		print '<input type="hidden" id="heure_entry_start" name="heure_entry_start" value="'.(GETPOSTISSET('heure_entry_start') ? GETPOST('heure_entry_start', 'alphanohtml') : $object->heure_entry_start).'">';
-		print '<input type="hidden" id="heure_entry_end" name="heure_entry_end" value="'.(GETPOSTISSET('heure_entry_end') ? GETPOST('heure_entry_end', 'alphanohtml') : $object->heure_entry_end).'">';
 
 		print '<script>
+
+			function removeColons(input) {
+				input.value = input.value.replace(/:/g, "");
+			}
+
+			function updateVisibility() {
+				let jours = ["all", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samdi", "dimanche"];
+				jours.forEach(jour => {
+					let checkbox = document.getElementById("checkbox_" + jour);
+					let timeInputs = document.getElementById("time_inputs" + (jour === "all" ? "" : "_" + jour));
+					if (checkbox && timeInputs) {
+						timeInputs.style.display = checkbox.checked ? "block" : "none";
+					}
+				});
+			}
+
 			function updateJoursEntry() {
 				var checkboxAll = document.getElementById("checkbox_all");
-				var checkboxLundi = document.getElementById("checkbox_lundi");
-				var checkboxMardi = document.getElementById("checkbox_mardi");
-				var checkboxMercredi = document.getElementById("checkbox_mercredi");
-				var checkboxJeudi = document.getElementById("checkbox_jeudi");
-				var checkboxVendredi = document.getElementById("checkbox_vendredi");
-				var checkboxSamedi = document.getElementById("checkbox_samedi");
-				var checkboxDimanche = document.getElementById("checkbox_dimanche");
-				var joursEntry = document.getElementById("jours_entry");
-
-				var allValue = checkboxAll.checked ? "1,1,1,1,1,1,1" : "0";
-				var lundiValue = checkboxLundi.checked ? "1" : "0";
-				var mardiValue = checkboxMardi.checked ? "1" : "0";
-				var mercrediValue = checkboxMercredi.checked ? "1" : "0";
-				var jeudiValue = checkboxJeudi.checked ? "1" : "0";
-				var vendrediValue = checkboxVendredi.checked ? "1" : "0";
-				var samediValue = checkboxSamedi.checked ? "1" : "0";
-				var dimancheValue = checkboxDimanche.checked ? "1" : "0";
+				var jours = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samdi", "dimanche"];
+				var olldaysEntry = document.getElementById("oll_days_entry");
 
 				if (checkboxAll.checked) {
-					joursEntry.value = allValue ;
+					olldaysEntry.value = "1";
+					jours.forEach(jour => {
+						document.getElementById(jour + "_entry").value = "0";
+						document.getElementById("tdheureentrystart_" + jour).value = "";
+						document.getElementById("tdheureentryend_" + jour).value = "";
+					});
 				} else {
-					joursEntry.value = lundiValue + "," + mardiValue + "," + mercrediValue + "," + jeudiValue + "," + vendrediValue + "," + samediValue + "," + dimancheValue ;
+					olldaysEntry.value = "0";
+					document.getElementById("tdheureentrystart_all").value = "";
+					document.getElementById("tdheureentryend_all").value = "";
 				}
+
+				jours.forEach(jour => {
+					var checkboxJour = document.getElementById("checkbox_" + jour);
+					if (checkboxJour.checked) {
+						document.getElementById(jour + "_entry").value = "1";
+					} else {
+						document.getElementById(jour + "_entry").value = "0";
+						document.getElementById("tdheureentrystart_" + jour).value = "";
+						document.getElementById("tdheureentryend_" + jour).value = "";
+					}
+				});
 			}
 
 			function updateHeureEntries() {
-
-				var checkboxAll = document.getElementById("checkbox_all");
-
-				var startTimeAll = document.getElementById("tdheureentrystart_all").value;
-				var endTimeAll = document.getElementById("tdheureentryend_all").value ;
-				var startTimeLundi = document.getElementById("tdheureentrystart_lundi").value || "null";
-				var endTimeLundi = document.getElementById("tdheureentryend_lundi").value || "null";
-				var startTimeMardi = document.getElementById("tdheureentrystart_mardi").value || "null";
-				var endTimeMardi = document.getElementById("tdheureentryend_mardi").value || "null";
-				var startTimeMercredi = document.getElementById("tdheureentrystart_mercredi").value || "null";
-				var endTimeMercredi = document.getElementById("tdheureentryend_mercredi").value || "null";
-				var startTimeJeudi = document.getElementById("tdheureentrystart_jeudi").value || "null";
-				var endTimeJeudi = document.getElementById("tdheureentryend_jeudi").value || "null";
-				var startTimeVendredi = document.getElementById("tdheureentrystart_vendredi").value || "null";
-				var endTimeVendredi = document.getElementById("tdheureentryend_vendredi").value || "null";
-				var startTimeSamedi = document.getElementById("tdheureentrystart_samedi").value || "null";
-				var endTimeSamedi = document.getElementById("tdheureentryend_samedi").value || "null";
-				var startTimeDimanche = document.getElementById("tdheureentrystart_dimanche").value || "null";
-				var endTimeDimanche = document.getElementById("tdheureentryend_dimanche").value || "null";
-
-				var heureEntryStart = document.getElementById("heure_entry_start");
-				var heureEntryEnd = document.getElementById("heure_entry_end");
-
-				// Concatenate times for both days in the hidden fields
-
-				
-				if (checkboxAll.checked) {
-					heureEntryStart.value = startTimeAll;
-					heureEntryEnd.value = endTimeAll;
-				} else {
-					heureEntryStart.value = startTimeLundi + ";" + startTimeMardi + ";" + startTimeMercredi + ";" + startTimeJeudi + ";" + startTimeVendredi + ";" + startTimeSamedi + ";" + startTimeDimanche;
-					heureEntryEnd.value = endTimeLundi + ";" + endTimeMardi + ";" + endTimeMercredi + ";" + endTimeJeudi + ";" + endTimeVendredi + ";" + endTimeSamedi + ";" + endTimeDimanche;
-        		}
-
-			}
-			
-			function updateVisibility() {
-				var checkbox = document.getElementById("checkbox_all");
-				var timeInputs = document.getElementById("time_inputs");
-				var checkboxLundi = document.getElementById("checkbox_lundi");
-				var timeInputsLundi = document.getElementById("time_inputs_lundi");
-				var checkboxMardi = document.getElementById("checkbox_mardi");
-				var timeInputsMardi = document.getElementById("time_inputs_mardi");
-				var checkboxMercredi = document.getElementById("checkbox_mercredi");
-				var timeInputsMercredi = document.getElementById("time_inputs_mercredi");
-				var checkboxJeudi = document.getElementById("checkbox_jeudi");
-				var timeInputsJeudi = document.getElementById("time_inputs_jeudi");
-				var checkboxVendredi = document.getElementById("checkbox_vendredi");
-				var timeInputsVendredi = document.getElementById("time_inputs_vendredi");
-				var checkboxSamedi = document.getElementById("checkbox_samedi");
-				var timeInputsSamedi = document.getElementById("time_inputs_samedi");
-				var checkboxDimanche = document.getElementById("checkbox_dimanche");
-				var timeInputsDimanche = document.getElementById("time_inputs_dimanche");
-				
-				if (checkbox.checked) {
-					timeInputs.style.display = "inline";
-				} else {
-					timeInputs.style.display = "none";
-				}
-
-				if (checkboxLundi.checked) {
-					timeInputsLundi.style.display = "inline";
-				} else {
-					timeInputsLundi.style.display = "none";
-				}
-
-				if (checkboxMardi.checked) {
-					timeInputsMardi.style.display = "inline";
-				} else {
-					timeInputsMardi.style.display = "none";
-				}
-
-				if (checkboxMercredi.checked) {
-					timeInputsMercredi.style.display = "inline";
-				} else {
-					timeInputsMercredi.style.display = "none";
-				}
-
-				if (checkboxJeudi.checked) {
-					timeInputsJeudi.style.display = "inline";
-				} else {
-					timeInputsJeudi.style.display = "none";
-				}
-
-				if (checkboxVendredi.checked) {
-					timeInputsVendredi.style.display = "inline";
-				} else {
-					timeInputsVendredi.style.display = "none";
-				}
-
-				if (checkboxSamedi.checked) {
-					timeInputsSamedi.style.display = "inline";
-				} else {
-					timeInputsSamedi.style.display = "none";
-				}
-
-				if (checkboxDimanche.checked) {
-					timeInputsDimanche.style.display = "inline";
-				} else {
-					timeInputsDimanche.style.display = "none";
-				}
+				// Ваша логика для обновления полей времени
 			}
 
+			window.addEventListener("load", function() {
+				updateVisibility();
+			});
+		</script>';
 
-				
-			
-			
 
-			</script>';
 
 		
 
@@ -2310,7 +2283,15 @@ if (is_object($objcanvas) && $objcanvas->displayCanvasExists($action)) {
 			}
 			print $form->formconfirm("card.php?rowid=".$id, $langs->trans("ExcludeMember"), $langs->trans("ConfirmExcludeMember"), "confirm_exclude", $formquestion, 'no', 1, 240);
 		}
+//////////////////////////tutnadoiz  
 
+		if ($action == 'delete_card_uid') {
+			$formquestion = array();
+			if ($backtopage) {
+				$formquestion[] = array('type' => 'hidden', 'name' => 'backtopage', 'value' => ($backtopage != '1' ? $backtopage : $_SERVER["HTTP_REFERER"]));
+			}
+			print $form->formconfirm("card.php?rowid=".$id, $langs->trans("DeleteCard_uid"), $langs->trans("ConfirmDeleteCard_uid"), "confirm_delete_card_uid", $formquestion, 'no', 1);
+		}
 		// Confirm remove member
 		if ($action == 'delete') {
 			$formquestion = array();
